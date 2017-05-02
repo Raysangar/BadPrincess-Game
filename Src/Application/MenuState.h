@@ -1,0 +1,236 @@
+//---------------------------------------------------------------------------
+// MenuState.h
+//---------------------------------------------------------------------------
+
+/**
+@file MenuState.h
+
+Contiene la declaración del estado de menú.
+
+@see Application::CApplicationState
+@see Application::CMenuState
+
+@author David Llansó
+@date Agosto, 2010
+*/
+
+#ifndef __Application_MenuState_H
+#define __Application_MenuState_H
+
+#include "ApplicationState.h"
+
+// Predeclaración de clases para ahorrar tiempo de compilación
+namespace Application 
+{
+	class CBaseApplication;
+}
+
+namespace CEGUI
+{
+	class EventArgs;
+	class Window;
+}
+
+
+namespace Audio
+{
+	class CEvent;
+}
+
+namespace Application 
+{
+	/**
+	Como su nombre indica, esta clase es la clase del menú
+	principal del juego. Es muy sencilla y lo único que hace es cargar
+	un layout de CEGUI al inicio y activarlo y desactivarlo cuando
+	se activa o desactiva el estado (haciéndo visible/invisible también
+	el puntero del ratón). También asocia los eventos de los botones 
+	del menú a las funciones C++ que se deben invocar cuando los botones
+	son pulsados.
+	<p>
+	Este estado es CEGUI dependiente, lo cual no es deseable, la aplicación
+	debería ser independiente de las tecnologías usadas.
+
+	@ingroup applicationGroup
+
+	@author David Llansó
+	@date Agosto, 2010
+	*/
+	class CMenuState : public CApplicationState 
+	{
+	public:
+		/** 
+		Constructor de la clase 
+		*/
+		CMenuState(CBaseApplication *app) : CApplicationState(app), menuMusic(nullptr),_menuHiding(false),_menuShowing(false),_firstTick(true)
+				{}
+
+		/** 
+		Destructor 
+		*/
+		virtual ~CMenuState();
+
+		/**
+		Función llamada cuando se crea el estado (se "engancha" en la
+		aplicación, para que inicialice sus elementos.
+
+		@return true si todo fue bien.
+		*/
+		virtual bool init();
+
+		/**
+		Función llamada cuando se elimina ("desengancha") el
+		estado de la aplicación.
+		*/
+		virtual void release();
+
+		/**
+		Función llamada por la aplicación cuando se activa
+		el estado.
+		*/
+		virtual void activate();
+
+		/**
+		Función llamada por la aplicación cuando se desactiva
+		el estado.
+		*/
+		virtual void deactivate();
+
+		virtual void pause();
+
+		virtual void resume();
+
+		/**
+		Función llamada por la aplicación para que se ejecute
+		la funcionalidad del estado.
+
+		@param msecs Número de milisegundos transcurridos desde
+		la última llamada (o desde la áctivación del estado, en caso
+		de ser la primera vez...).
+		*/
+		virtual void tick(unsigned int msecs);
+
+		virtual void reloadGUI();
+
+		void startGame(std::string gameName);
+		// Métodos de CKeyboardListener
+		
+		/**
+		Método que será invocado siempre que se pulse una tecla. 
+		Será la aplicación quién llame a este método cuando el 
+		estado esté activo. Esta clase NO se registra en el 
+		InputManager sino que es la aplicación quien lo hace y 
+		delega en los estados.
+
+		@param key Código de la tecla pulsada.
+		@return true si el evento ha sido procesado. En este caso 
+		el gestor no llamará a otros listeners.
+		*/
+		virtual bool keyPressed(GUI::TKey key);
+		
+		/**
+		Método que será invocado siempre que se termine la pulsación
+		de una tecla. Será la aplicación quién llame a este método 
+		cuando el estado esté activo. Esta clase NO se registra en
+		el InputManager sino que es la aplicación quien lo hace y 
+		delega en los estados.
+
+		@param key Código de la tecla pulsada.
+		@return true si el evento ha sido procesado. En este caso 
+		el gestor no llamará a otros listeners.
+		*/
+		virtual bool keyReleased(GUI::TKey key);
+
+		// Métodos de CMouseListener
+		
+		/**
+		Método que será invocado siempre que se mueva el ratón. La
+		aplicación avisa de este evento al estado actual.
+
+		@param mouseState Estado del ratón cuando se lanza el evento.
+		@return true si el evento ha sido procesado. En este caso 
+		el gestor no llamará a otros listeners.
+		*/
+		virtual bool mouseMoved(const GUI::CMouseState &mouseState);
+		
+		/**
+		Método que será invocado siempre que se pulse un botón. La
+		aplicación avisa de este evento al estado actual.
+
+		@param mouseState Estado del ratón cuando se lanza el evento.
+		@return true si el evento ha sido procesado. En este caso 
+		el gestor no llamará a otros listeners.
+		*/
+		virtual bool mousePressed(const GUI::CMouseState &mouseState);
+
+		/**
+		Método que será invocado siempre que se termine la pulsación
+		de un botón. La aplicación avisa de este evento al estado 
+		actual.
+
+		@param mouseState Estado del ratón cuando se lanza el evento.
+		@return true si el evento ha sido procesado. En este caso 
+		el gestor no llamará a otros listeners. 
+		*/
+		virtual bool mouseReleased(const GUI::CMouseState &mouseState);
+
+	private:
+
+		std::string _nextState;
+
+		/**
+		Tiempo de juego en milisegundos.
+		*/
+		unsigned int _time;
+
+		Audio::CEvent* menuMusic;
+
+		/**
+		Ventana CEGUI que muestra el menú.
+		*/
+		CEGUI::Window* _menuWindow;
+
+		bool _menuShowing;
+		bool _menuHiding;
+		bool _firstTick;
+
+
+		void initGUI();
+
+		/**
+		Función que se quiere realizar cuando se pulse el botón start.
+		Simplemente cambia al estado de juego.
+		*/
+		bool startTutorialReleased(const CEGUI::EventArgs& e);
+		/**
+		Función que se quiere realizar cuando se pulse el botón start.
+		Simplemente cambia al estado de juego.
+		*/
+		bool startSurvivorReleased(const CEGUI::EventArgs& e);
+
+		/**
+		Función que se quiere realizar cuando se pulse el botón start.
+		Simplemente cambia al estado de juego.
+		*/
+		bool campaignReleased(const CEGUI::EventArgs& e);
+
+		/**
+		Función que se quiere realizar cuando se pulse el botón exit.
+		Simplemente termina la aplicación.
+		*/
+		bool exitReleased(const CEGUI::EventArgs& e);
+
+		bool creditsReleased(const CEGUI::EventArgs& e);
+
+		bool optionsReleased(const CEGUI::EventArgs& e);
+
+		bool helpReleased(const CEGUI::EventArgs& e);
+
+		bool buttonHover(const CEGUI::EventArgs& e);
+
+
+	}; // CMenuState
+
+} // namespace Application
+
+#endif //  __Application_MenuState_H

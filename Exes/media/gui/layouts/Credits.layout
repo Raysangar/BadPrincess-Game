@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+    <Window type="DefaultWindow" name="Credits" >
+        <Property name="Area" value="{{-1,0},{0,0},{0,0},{1,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />		
+		
+		<Window type="BadPrincess/Label" name="CreditsText0" >
+            <Property name="Area" value="{{0,0},{1,0},{1,0},{2,0}}" />
+			<Property name="Text" value="Credits" />
+            <Property name="AlwaysOnTop" value="True" />
+			<Property name="NormalTextColour" value="FFffffff" />
+        </Window>
+		
+		<Window type="BadPrincess/Label" name="CreditsText1" >
+            <Property name="Area" value="{{0,0},{2,0},{1,0},{3,0}}" />
+			<Property name="Text" value="Credits" />
+            <Property name="AlwaysOnTop" value="True" />
+			<Property name="NormalTextColour" value="FFffffff" />
+        </Window>
+		
+    </Window>
+</GUILayout>

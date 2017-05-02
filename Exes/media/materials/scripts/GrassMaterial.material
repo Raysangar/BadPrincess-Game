@@ -1,0 +1,20 @@
+import * from "FogOfWar.material"
+material GrassMaterial : FogOfWardMaterialUnified
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 2 2 2 100 30
+			emissive 0 0 0 0
+			receive_shadows on
+			texture_unit
+			{
+				texture grasstex.png
+				filtering linear linear linear
+			}
+		}	
+	}
+}

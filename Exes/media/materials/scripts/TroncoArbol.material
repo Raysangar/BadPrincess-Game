@@ -1,0 +1,47 @@
+import * from "FogOfWar.material"
+material TroncoArbol/blinn1 : FogOfWardMaterialUnified
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 1 1 1 1
+			specular 2 2 2 100 30
+			emissive 0 0 0 0
+
+			texture_unit
+			{
+				texture tronco2.jpg
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material TroncoArbol/blinn2 : FogOfWardMaterialUnified
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 1 1 1 1
+			specular 2 2 2 100 30
+			emissive 0 0 0 0
+
+			texture_unit
+			{
+				texture tronco3.jpg
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+import * from "FogOfWar.material"
+material material_tree_pale_leaf : FogOfWardMaterialUnified
+{
+	technique technique_tree_pale_leaf
+	{
+		pass pass_tree_pale_leaf
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0 0 0 0 0
+
+			scene_blend alpha_blend
+			alpha_rejection greater 128
+
+			texture_unit texture_tree_pale_leaf
+			{
+				texture tree_diffuse_pale.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_tree_pale_trunk : FogOfWardMaterialUnified
+{
+	technique technique_tree_pale_trunk
+	{
+		pass pass_tree_pale_trunk
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit texture_tree_pale_trunk
+			{
+				texture tree_diffuse_pale.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,46 @@
+import * from "FogOfWar.material"
+material Material#36 : FogOfWardMaterialUnified
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 1 1 1 1
+			specular 2 2 2 100 30
+			emissive 0 0 0 0
+			texture_unit
+			{
+				texture Cartoon_Canopy3.png
+				filtering linear linear linear
+				colour_op_ex blend_current_alpha src_texture src_current
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#50 : FogOfWardMaterialUnified
+{
+	technique 
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 1 1 1 1 1
+			specular 2 2 2 100 30
+			emissive 0 0 0 0
+
+			texture_unit
+			{
+				texture Tree_Diffuse_Final.png
+	
+			}
+		}
+
+	}
+
+}

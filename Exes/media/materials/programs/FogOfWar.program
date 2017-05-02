@@ -1,0 +1,23 @@
+vertex_program FogOfWar_hlsl hlsl
+{
+    source FogOfWar_vs.hlsl
+    entry_point main
+    target vs_2_0
+}
+
+fragment_program FragmentFogOfWar_hlsl hlsl
+{
+	source FogOfWar_vs.hlsl
+	entry_point main_fp
+	target ps_3_0
+}
+
+vertex_program VertexFogOfWar unified
+{
+	delegate FogOfWar_hlsl
+}
+
+fragment_program FragmentFogOfWar unified
+{
+	delegate FragmentFogOfWar_hlsl
+}

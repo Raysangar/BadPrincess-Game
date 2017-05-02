@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Perception">
+      <UniqueIdentifier>{f3679d6f-3bd2-4527-ae80-3b6ce55c184d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Perception\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Perception\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Movement">
+      <UniqueIdentifier>{5bcaee1b-5191-41b0-a973-ac901781a779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Movement\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Movement\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Decision">
+      <UniqueIdentifier>{43a6bf28-2b83-4393-971a-11bfcf2fe7ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\StateMachines">
+      <UniqueIdentifier>{c408b0ef-262c-4387-b354-e505721fed49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\StateMachines\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Decision\StateMachines\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Decision\BT">
+      <UniqueIdentifier>{2345f5fc-ec60-4fa7-9fc5-610cf2d0fda8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\BT\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Decision\BT\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Decision\LatentActions">
+      <UniqueIdentifier>{e8093929-c87f-434f-9ba3-274d9bc51640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Thief">
+      <UniqueIdentifier>{24c816a9-eb21-4c24-a46f-52ee4c7d38c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Thief\Header Files">
+      <UniqueIdentifier>{ca1f2850-5999-421d-abdc-8b716a369e21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Thief\Source Files">
+      <UniqueIdentifier>{8a66a6e0-572a-4535-8d1e-0a0ee635cb24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\GoblinRanger">
+      <UniqueIdentifier>{85a07436-dd9e-494c-b4db-e32899310540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\GoblinRanger\Source Files">
+      <UniqueIdentifier>{01db0e0e-3d53-4b24-8974-d49197f44e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\GoblinRanger\Header Files">
+      <UniqueIdentifier>{7339db10-f985-460a-a443-26b9a0f8e8ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Common">
+      <UniqueIdentifier>{35f5de16-af1a-4873-973d-60f0e08ca830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Common\Header Files">
+      <UniqueIdentifier>{4022e768-6979-476b-a62b-379bc7203e47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Common\Source Files">
+      <UniqueIdentifier>{222ebbe4-5047-4139-b5e9-6e92242dbeab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\WorkmanGoblin">
+      <UniqueIdentifier>{5d5616ae-216a-413d-bf8e-1e9fcca497d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\WorkmanGoblin\Header Files">
+      <UniqueIdentifier>{b53aa8b3-fdfb-437c-82e4-1fb380497010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\WorkmanGoblin\Source Files">
+      <UniqueIdentifier>{00865b07-f95e-4d29-bfc2-07f71ab9885a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Princess">
+      <UniqueIdentifier>{beba8f50-e05e-4a0f-bff1-ae0098ec1d27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Princess\Header Files">
+      <UniqueIdentifier>{84eb47cd-9297-4a79-9af1-62fdcbc5a001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Princess\Source Files">
+      <UniqueIdentifier>{6208fea3-5e3d-4c7f-938a-614d83128578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Knight">
+      <UniqueIdentifier>{e3b5d25f-0ccd-4e11-ad23-5e1839266e9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Knight\Header Files">
+      <UniqueIdentifier>{fa0b4dda-d864-44ed-a1d5-f7aa33f0aabc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decision\LatentActions\Knight\Source Files">
+      <UniqueIdentifier>{1a866059-0475-450b-be50-526b38e35c27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Action">
+      <UniqueIdentifier>{a4b53ae1-9258-42d5-a61f-47220821b003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Action">
+      <UniqueIdentifier>{d56b88fa-8e26-421b-9783-ad254ab9ec1d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Src\AI\Server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\UndirectedGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\AStarFunctionsGaleon.cpp">
+      <Filter>Movement\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\DisjointSets.cpp">
+      <Filter>Movement\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\DynamicMovement.cpp">
+      <Filter>Movement\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\KinematicMovement.cpp">
+      <Filter>Movement\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\micropather.cpp">
+      <Filter>Movement\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Movement.cpp">
+      <Filter>Movement\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\WaypointGraph.cpp">
+      <Filter>Movement\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\StrategyController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAExecuteSM.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LatentAction.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAIdle.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAMoveTo.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAChaseEnemy.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAAttackEnemy.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAThief\LAThiefInteractSO.cpp">
+      <Filter>Decision\LatentActions\Thief\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LADie.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\ResourceServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\EntityManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LASetTrap.cpp">
+      <Filter>Decision\LatentActions\GoblinRanger\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\WaveManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Wave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LATaken.cpp">
+      <Filter>Decision\LatentActions\Princess\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAFaint.cpp">
+      <Filter>Decision\LatentActions\Princess\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAKidnappingPrincess.cpp">
+      <Filter>Decision\LatentActions\Knight\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\ActionNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\GameManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\EntityAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\GatherResourceAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\MoveCameraAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\ShowMessageAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\WaitTimeAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\SendMessageAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAGameOver.cpp">
+      <Filter>Decision\LatentActions\Knight\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\DefendToWaveAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAProtectKnight.cpp">
+      <Filter>Decision\LatentActions\Knight\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAReachSO.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LARequestSO.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAWaiting.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAThief\LAThiefDecision.cpp">
+      <Filter>Decision\LatentActions\Thief\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAWorkmanInteractSO.cpp">
+      <Filter>Decision\LatentActions\WorkmanGoblin\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LACarryEntity.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAChaseCarriedEntity.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAWaitCarriedEntity.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\BlockCameraAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\FollowEntityAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\LockMouseAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\ImmortalUnitAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\CheckSelectedUnits.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAStunned.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\TimerAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\ChangeAttackAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\UnselectEntitiesAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\SetAbilityIsEnabledAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\SetClickIsEnabledAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\CheckDistanceBetweenEntities.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\RemoveMessageAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\CreateEntityAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\CheckAbilityUsed.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\CheckResourceUnits.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\CheckSelectedTypes.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\SurvivorAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\IncrementsWavesCounter.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LASpawn.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LABuild.cpp">
+      <Filter>Decision\LatentActions\WorkmanGoblin\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAWaitBuild.cpp">
+      <Filter>Decision\LatentActions\WorkmanGoblin\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAIdleMenu.cpp">
+      <Filter>Decision\LatentActions\Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\LAGatherMenu.cpp">
+      <Filter>Decision\LatentActions\WorkmanGoblin\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\WaypointsPathLearning.cpp">
+      <Filter>Perception\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\DeleteEntityAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\TimedSurvivorAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\KillAllEnemiesAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\AI\Actions\CheckWaveEndedAction.cpp">
+      <Filter>Source Files\Action</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Src\AI\DynTriMat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\UndirectedGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\AStarFunctionsGaleon.h">
+      <Filter>Movement\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\DisjointSets.h">
+      <Filter>Movement\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\DynamicMovement.h">
+      <Filter>Movement\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\KinematicMovement.h">
+      <Filter>Movement\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\micropather.h">
+      <Filter>Movement\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Movement.h">
+      <Filter>Movement\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\WaypointGraph.h">
+      <Filter>Movement\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\StrategyController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAExecuteSM.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LatentAction.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Condition.h">
+      <Filter>Decision\StateMachines\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\StateMachine.h">
+      <Filter>Decision\StateMachines\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAIdle.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAMoveTo.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAChaseEnemy.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAAttackEnemy.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAThief\LAThiefInteractSO.h">
+      <Filter>Decision\LatentActions\Thief\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LADie.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\ResourceServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\EntityManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LASetTrap.h">
+      <Filter>Decision\LatentActions\GoblinRanger\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\WaveManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Wave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LATaken.h">
+      <Filter>Decision\LatentActions\Princess\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAFaint.h">
+      <Filter>Decision\LatentActions\Princess\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAKidnappingPrincess.h">
+      <Filter>Decision\LatentActions\Knight\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\ActionNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\GameManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\EntityAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\GatherResourceAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\MoveCameraAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\ShowMessageAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\WaitTimeAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\SendMessageAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAGameOver.h">
+      <Filter>Decision\LatentActions\Knight\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\DefendToWaveAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAProtectKnight.h">
+      <Filter>Decision\LatentActions\Knight\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAWaiting.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAReachSO.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LARequestSO.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAThief\LAThiefDecision.h">
+      <Filter>Decision\LatentActions\Thief\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAWorkmanInteractSO.h">
+      <Filter>Decision\LatentActions\WorkmanGoblin\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LACarryEntity.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAChaseCarriedEntity.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAWaitCarriedEntity.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\BlockCameraAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\FollowEntityAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\LockMouseAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\ImmortalUnitAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAStunned.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\ChangeAttackAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\TimerAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\UnselectEntitiesAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\SetAbilityIsEnabledAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\SetClickIsEnabledAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\CheckSelectedUnits.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\CheckDistanceBetweenEntities.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\RemoveMessageAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\CreateEntityAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\CheckAbilityUsed.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\CheckResourceUnits.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\CheckSelectedTypes.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\SurvivorAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\IncrementsWavesCounter.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LASpawn.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LABuild.h">
+      <Filter>Decision\LatentActions\WorkmanGoblin\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAWaitBuild.h">
+      <Filter>Decision\LatentActions\WorkmanGoblin\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAIdleMenu.h">
+      <Filter>Decision\LatentActions\Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\LAGatherMenu.h">
+      <Filter>Decision\LatentActions\WorkmanGoblin\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\WaypointsPathLearning.h">
+      <Filter>Perception\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\DeleteEntityAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\TimedSurvivorAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\KillAllEnemiesAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\AI\Actions\CheckWaveEndedAction.h">
+      <Filter>Header Files\Action</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

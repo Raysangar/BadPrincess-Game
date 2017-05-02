@@ -1,0 +1,2456 @@
+<?xml version="1.0" ?>
+
+<!--
+    Generic.looknfeel by Lukas E. Meindl
+
+    This looknfeel was created to provide GUIs with generic widgets that don't have a specific skin
+-->
+
+<Falagard version="7">
+
+	<WidgetLook name="BadPrincess/Label">
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="Colour" name="NormalTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF444444" type="Colour" name="DisabledTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="CentreAligned" type="VerticalTextFormatting" name="VertFormatting"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="CentreAligned" type="HorizontalTextFormatting" name="HorzFormatting"/>
+        <Property name="Size" value="{{0, 128}, {0, 32}}" />
+        <ImagerySection name="Label">
+            <TextComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Width"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <VertFormatProperty name="VertFormatting"/>
+                <HorzFormatProperty name="HorzFormatting"/>
+            </TextComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="Label">
+                    <ColourProperty name="NormalTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="Label">
+                    <ColourProperty name="DisabledTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+  <WidgetLook name="BadPrincess/LabelShortcut">
+    <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="Colour" name="NormalTextColour"/>
+    <PropertyDefinition redrawOnWrite="true" initialValue="FF444444" type="Colour" name="DisabledTextColour"/>
+    <PropertyDefinition redrawOnWrite="true" initialValue="CentreAligned" type="VerticalTextFormatting" name="VertFormatting"/>
+    <PropertyDefinition redrawOnWrite="true" initialValue="CentreAligned" type="HorizontalTextFormatting" name="HorzFormatting"/>
+    <Property name="Size" value="{{0, 128}, {0, 32}}" />
+    <ImagerySection name="Label">
+      <TextComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0"/>
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0"/>
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width"/>
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height"/>
+          </Dim>
+        </Area>
+        <VertFormatProperty name="VertFormatting"/>
+        <HorzFormatProperty name="HorzFormatting"/>
+      </TextComponent>
+    </ImagerySection>
+    <ImagerySection name="frame">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0"/>
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0"/>
+          </Dim>
+          <Dim type="RightEdge">
+            <UnifiedDim scale="1" type="RightEdge"/>
+          </Dim>
+          <Dim type="BottomEdge">
+            <UnifiedDim scale="1" type="BottomEdge"/>
+          </Dim>
+        </Area>
+        <Image component="TopLeftCorner" name="BadPrincessHud/CaptionBoxTL"/>
+        <Image component="TopRightCorner" name="BadPrincessHud/CaptionBoxTR"/>
+        <Image component="BottomLeftCorner" name="BadPrincessHud/CaptionBoxBL"/>
+        <Image component="BottomRightCorner" name="BadPrincessHud/CaptionBoxBR"/>
+        <Image component="LeftEdge" name="BadPrincessHud/CaptionBoxL"/>
+        <Image component="TopEdge" name="BadPrincessHud/CaptionBoxT"/>
+        <Image component="RightEdge" name="BadPrincessHud/CaptionBoxR"/>
+        <Image component="BottomEdge" name="BadPrincessHud/CaptionBoxB"/>
+        <Image component="Background" name="BadPrincessHud/CaptionBoxM"/>
+      </FrameComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="frame"/>
+        <Section section="Label">
+          <ColourProperty name="NormalTextColour"/>
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="Label">
+          <ColourProperty name="DisabledTextColour"/>
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+	<WidgetLook name="BadPrincess/Image">
+        <PropertyDefinition redrawOnWrite="true" initialValue="tl:FFFFFFFF tr:FFFFFFFF bl:FFFFFFFF br:FFFFFFFF" type="ColourRect" name="ImageColours"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="Stretched" type="VerticalFormatting" name="VertFormatting"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="Stretched" type="HorizontalFormatting" name="HorzFormatting"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="" type="Image" name="Image"/>
+        <Property name="Size" value="{{0, 128}, {0, 128}}" />
+
+        <ImagerySection name="imageSection">
+            <ImageryComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <ImageProperty name="Image"/>
+                <ColourRectProperty name="ImageColours"/>
+                <VertFormatProperty name="VertFormatting"/>
+                <HorzFormatProperty name="HorzFormatting"/>
+            </ImageryComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="imageSection"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="imageSection"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+
+	<WidgetLook name="BadPrincess/ImageButton">
+        <PropertyDefinition redrawOnWrite="true" initialValue="" type="Image" name="NormalImage"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="" type="Image" name="HoverImage"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="" type="Image" name="PushedImage"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="" type="Image" name="DisabledImage"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="Stretched" type="VerticalFormatting" name="VertImageFormatting"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="Stretched" type="HorizontalFormatting" name="HorzImageFormatting"/>
+        <Property name="Size" value="{{0, 96}, {0, 32}}" />
+        <ImagerySection name="normal">
+            <ImageryComponent>
+                <ImageProperty name="NormalImage"/>
+                <VertFormatProperty name="VertImageFormatting"/>
+                <HorzFormatProperty name="HorzImageFormatting"/>
+            </ImageryComponent>
+        </ImagerySection>
+        <ImagerySection name="hover">
+            <ImageryComponent>
+                <ImageProperty name="HoverImage"/>
+                <VertFormatProperty name="VertImageFormatting"/>
+                <HorzFormatProperty name="HorzImageFormatting"/>
+            </ImageryComponent>
+        </ImagerySection>
+        <ImagerySection name="pushed">
+            <ImageryComponent>
+                <ImageProperty name="PushedImage"/>
+                <VertFormatProperty name="VertImageFormatting"/>
+                <HorzFormatProperty name="HorzImageFormatting"/>
+            </ImageryComponent>
+        </ImagerySection>
+        <ImagerySection name="disabled">
+            <ImageryComponent>
+                <ImageProperty name="DisabledImage"/>
+                <VertFormatProperty name="VertImageFormatting"/>
+                <HorzFormatProperty name="HorzImageFormatting"/>
+            </ImageryComponent>
+        </ImagerySection>
+        <StateImagery name="Normal">
+            <Layer>
+                <Section section="normal"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Hover">
+            <Layer>
+                <Section section="hover"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Pushed">
+            <Layer>
+                <Section section="pushed"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="PushedOff">
+            <Layer>
+                <Section section="hover"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="disabled"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+				
+ <WidgetLook name="BadPrincess/Portrait">
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="TextColour"/>
+        <PropertyDefinition initialValue="TopAligned" type="VerticalTextFormatting" name="VertFormatting"/>
+        <PropertyDefinition initialValue="CentreAligned" type="HorizontalTextFormatting" name="HorzFormatting"/>
+        <Property name="Size" value="{{0.3, 0}, {0.3, 0}}" />
+        <NamedArea name="inner_rect">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <OperatorDim op="Add">
+                        <ImageDim name="BadPrincessHud/TextBoxT" dimension="Height"/>
+                        <FontDim type="LineSpacing"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <ImagerySection name="frame">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/TextBoxTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/TextBoxTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/TextBoxBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/TextBoxBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/TextBoxL"/>
+                <Image component="TopEdge" name="BadPrincessHud/TextBoxT"/>
+                <Image component="RightEdge" name="BadPrincessHud/TextBoxR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/TextBoxB"/>
+                <Image component="Background" name="BadPrincessHud/TextBoxM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="label">
+            <TextComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <ImageDim name="BadPrincessHud/TextBoxL" dimension="Width"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <OperatorDim op="Divide">
+                            <ImageDim name="BadPrincessHud/TextBoxT" dimension="Height"/>
+                            <AbsoluteDim value="2"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1.0" type="RightEdge"/>
+                            <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1.0" type="BottomEdge"/>
+                            <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                        </OperatorDim>
+                    </Dim>
+                </Area>
+                <VertFormatProperty name="VertFormatting"/>
+                <HorzFormatProperty name="HorzFormatting"/>
+            </TextComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="frame"/>
+                <Section section="label">
+                    <ColourProperty name="TextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="frame"/>
+                <Section section="label">
+                    <ColourProperty name="TextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+ 
+	<WidgetLook name="BadPrincess/Group">
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="TextColour"/>
+        <PropertyDefinition initialValue="TopAligned" type="VerticalTextFormatting" name="VertFormatting"/>
+        <PropertyDefinition initialValue="CentreAligned" type="HorizontalTextFormatting" name="HorzFormatting"/>
+        <Property name="Size" value="{{0.3, 0}, {0.3, 0}}" />
+        <NamedArea name="inner_rect">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/UnitBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <OperatorDim op="Add">
+                        <ImageDim name="BadPrincessHud/UnitBoxT" dimension="Height"/>
+                        <FontDim type="LineSpacing"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <ImageDim name="BadPrincessHud/UnitBoxR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/UnitBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <ImagerySection name="frame">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/UnitBoxTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/UnitBoxTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/UnitBoxBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/UnitBoxBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/UnitBoxL"/>
+                <Image component="TopEdge" name="BadPrincessHud/UnitBoxT"/>
+                <Image component="RightEdge" name="BadPrincessHud/UnitBoxR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/UnitBoxB"/>
+                <Image component="Background" name="BadPrincessHud/UnitBoxM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="label">
+            <TextComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <ImageDim name="BadPrincessHud/UnitBoxL" dimension="Width"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <OperatorDim op="Divide">
+                            <ImageDim name="BadPrincessHud/UnitBoxT" dimension="Height"/>
+                            <AbsoluteDim value="2"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1.0" type="RightEdge"/>
+                            <ImageDim name="BadPrincessHud/UnitBoxR" dimension="Width"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1.0" type="BottomEdge"/>
+                            <ImageDim name="BadPrincessHud/UnitBoxB" dimension="Height"/>
+                        </OperatorDim>
+                    </Dim>
+                </Area>
+                <VertFormatProperty name="VertFormatting"/>
+                <HorzFormatProperty name="HorzFormatting"/>
+            </TextComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="frame"/>
+                <Section section="label">
+                    <ColourProperty name="TextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="frame"/>
+                <Section section="label">
+                    <ColourProperty name="TextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+  
+	<WidgetLook name="BadPrincess/Button">
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="NormalTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="HoverTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="PushedTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF888888" type="ColourRect" name="DisabledTextColour"/>
+        <Property name="Size" value="{{0, 96}, {0, 32}}" />
+        <ImagerySection name="label">
+            <TextComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <VertFormat type="CentreAligned"/>
+                <HorzFormat type="WordWrapCentreAligned"/>
+            </TextComponent>
+        </ImagerySection>
+        <ImagerySection name="normal">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ButtonTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ButtonTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ButtonBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ButtonBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ButtonL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ButtonT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ButtonR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ButtonB"/>
+                <Image component="Background" name="BadPrincessHud/ButtonM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="hover">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ButtonHoverTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ButtonHoverTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ButtonHoverBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ButtonHoverBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ButtonHoverL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ButtonHoverT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ButtonHoverR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ButtonHoverB"/>
+                <Image component="Background" name="BadPrincessHud/ButtonHoverM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="pushed">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ButtonDownTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ButtonDownTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ButtonDownBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ButtonDownBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ButtonDownL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ButtonDownT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ButtonDownR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ButtonDownB"/>
+                <Image component="Background" name="BadPrincessHud/ButtonDownM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <StateImagery name="Normal">
+            <Layer>
+                <Section section="normal"/>
+                <Section section="label">
+                    <ColourProperty name="NormalTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Hover">
+            <Layer>
+                <Section section="hover"/>
+                <Section section="label">
+                    <ColourProperty name="HoverTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Pushed">
+            <Layer>
+                <Section section="pushed"/>
+                <Section section="label">
+                    <ColourProperty name="PushedTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="PushedOff">
+            <Layer>
+                <Section section="hover"/>
+                <Section section="label">
+                    <ColourProperty name="HoverTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="normal"/>
+                <Section section="label">
+                    <ColourProperty name="DisabledTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+
+	<WidgetLook name="BadPrincess/MiniProgressBar">
+        <Property name="Size" value="{{0, 256}, {0, 32}}" />
+        <NamedArea name="ProgressArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <UnifiedDim scale="1" type="RightEdge"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <UnifiedDim scale="1" type="BottomEdge"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <ImagerySection name="frame">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Width"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/MiniProgressBarBgTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/MiniProgressBarBgTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/MiniProgressBarBgBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/MiniProgressBarBgBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/MiniProgressBarBgL"/>
+                <Image component="TopEdge" name="BadPrincessHud/MiniProgressBarBgT"/>
+                <Image component="RightEdge" name="BadPrincessHud/MiniProgressBarBgR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/MiniProgressBarBgB"/>
+                <Image component="Background" name="BadPrincessHud/MiniProgressBarBgM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="progress">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <OperatorDim op="Multiply">
+                            <UnifiedDim scale="1" type="Width"/>
+                            <PropertyDim name="CurrentProgress"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/MiniProgressBarTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/MiniProgressBarTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/MiniProgressBarBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/MiniProgressBarBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/MiniProgressBarL"/>
+                <Image component="TopEdge" name="BadPrincessHud/MiniProgressBarT"/>
+                <Image component="RightEdge" name="BadPrincessHud/MiniProgressBarR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/MiniProgressBarB"/>
+                <Image component="Background" name="BadPrincessHud/MiniProgressBarM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="frame"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="frame"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="EnabledProgress">
+            <Layer>
+                <Section section="progress"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="DisabledProgress">
+            <Layer>
+                <Section section="progress"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+	
+	<WidgetLook name="BadPrincess/ProgressBar">
+        <Property name="Size" value="{{0, 256}, {0, 32}}" />
+        <NamedArea name="ProgressArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <UnifiedDim scale="1" type="RightEdge"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <UnifiedDim scale="1" type="BottomEdge"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <ImagerySection name="frame">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Width"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ProgressBarBgTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ProgressBarBgTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ProgressBarBgBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ProgressBarBgBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ProgressBarBgL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ProgressBarBgT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ProgressBarBgR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ProgressBarBgB"/>
+                <Image component="Background" name="BadPrincessHud/ProgressBarBgM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="progress">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <OperatorDim op="Multiply">
+                            <UnifiedDim scale="1" type="Width"/>
+                            <PropertyDim name="CurrentProgress"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ProgressBarTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ProgressBarTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ProgressBarBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ProgressBarBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ProgressBarL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ProgressBarT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ProgressBarR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ProgressBarB"/>
+                <Image component="Background" name="BadPrincessHud/ProgressBarM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="frame"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="frame"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="EnabledProgress">
+            <Layer>
+                <Section section="progress"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="DisabledProgress">
+            <Layer>
+                <Section section="progress"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+  <!--
+    ***************************************************
+        BadPrincess/ColoredProgressBar
+    ***************************************************
+    -->
+  <WidgetLook name="BadPrincess/ColoredProgressBar">
+    <!--### CUSTOM CODE ###-->
+    <PropertyDefinition name="CustomRectColor"  type="ColourRect" initialValue="tl:FF000000 tr:FF000000 bl:FF000000 br:FF000000" redrawOnWrite="true" />
+    <Property name="Size" value="{{0, 256}, {0, 32}}" />
+    <NamedArea name="ProgressArea">
+      <Area>
+        <Dim type="LeftEdge">
+          <AbsoluteDim value="0"/>
+        </Dim>
+        <Dim type="TopEdge">
+          <AbsoluteDim value="0"/>
+        </Dim>
+        <Dim type="Width">
+          <UnifiedDim scale="1" type="Width"/>
+        </Dim>
+        <Dim type="Height">
+          <UnifiedDim scale="1" type="Height"/>
+        </Dim>
+      </Area>
+    </NamedArea>
+    <ImagerySection name="frame">
+      <FrameComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <AbsoluteDim value="0"/>
+          </Dim>
+          <Dim type="TopEdge">
+            <AbsoluteDim value="0"/>
+          </Dim>
+          <Dim type="Width">
+            <UnifiedDim scale="1" type="Width"/>
+          </Dim>
+          <Dim type="Height">
+            <UnifiedDim scale="1" type="Height"/>
+          </Dim>
+        </Area>
+        <Image component="TopLeftCorner" name="BadPrincessHud/ProgressBarBgTL"/>
+        <Image component="TopRightCorner" name="BadPrincessHud/ProgressBarBgTR"/>
+        <Image component="BottomLeftCorner" name="BadPrincessHud/ProgressBarBgBL"/>
+        <Image component="BottomRightCorner" name="BadPrincessHud/ProgressBarBgBR"/>
+        <Image component="LeftEdge" name="BadPrincessHud/ProgressBarBgL"/>
+        <Image component="TopEdge" name="BadPrincessHud/ProgressBarBgT"/>
+        <Image component="RightEdge" name="BadPrincessHud/ProgressBarBgR"/>
+        <Image component="BottomEdge" name="BadPrincessHud/ProgressBarBgB"/>
+      </FrameComponent>
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <ImageDim name="BadPrincessHud/ProgressBarBgL" dimension="Width"/>
+          </Dim>
+          <Dim type="TopEdge">
+            <ImageDim name="BadPrincessHud/ProgressBarBgT" dimension="Height"/>
+          </Dim>
+          <Dim type="RightEdge">
+            <OperatorDim op="Subtract">
+              <UnifiedDim scale="1" type="RightEdge"/>
+              <ImageDim name="BadPrincessHud/ProgressBarBgR" dimension="Width"/>
+            </OperatorDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <OperatorDim op="Subtract">
+              <UnifiedDim scale="1" type="BottomEdge"/>
+              <ImageDim name="BadPrincessHud/ProgressBarBgB" dimension="Height"/>
+            </OperatorDim>
+          </Dim>
+        </Area>
+        <Image name="BadPrincessHud/ProgressBarBgM"/>
+        <VertFormat type="Stretched"/>
+        <HorzFormat type="Stretched"/>
+      </ImageryComponent>
+    </ImagerySection>
+    <ImagerySection name="progress_lights">
+      <ImageryComponent>
+        <Area>
+          <Dim type="LeftEdge">
+            <ImageDim name="BadPrincessHud/ProgressBarBgL" dimension="Width"/>
+          </Dim>
+          <Dim type="TopEdge">
+            <ImageDim name="BadPrincessHud/ProgressBarBgT" dimension="Height"/>
+          </Dim>
+          <Dim type="RightEdge">
+            <OperatorDim op="Subtract">
+              <UnifiedDim scale="1.0" type="RightEdge"/>
+              <ImageDim name="BadPrincessHud/ProgressBarBgR" dimension="Width"/>
+            </OperatorDim>
+          </Dim>
+          <Dim type="BottomEdge">
+            <OperatorDim op="Subtract">
+              <UnifiedDim scale="1.0" type="BottomEdge"/>
+              <ImageDim name="BadPrincessHud/ProgressBarBgB" dimension="Height"/>
+            </OperatorDim>
+          </Dim>
+        </Area>
+        <Image name="BadPrincessHud/ProgressBarFg"/>
+        <!--### CUSTOM CODE ###-->
+        <ColourRectProperty name="CustomRectColor" />
+
+        <VertFormat type="Stretched"/>
+        <HorzFormat type="Stretched"/>
+      </ImageryComponent>
+    </ImagerySection>
+    <StateImagery name="Enabled">
+      <Layer>
+        <Section section="frame"/>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="Disabled">
+      <Layer>
+        <Section section="frame"/>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="EnabledProgress">
+      <Layer>
+        <Section section="progress_lights">
+          <!-- <Colours topLeft="FF2222FF" topRight="FF2222FF" bottomLeft="FF2222FF" bottomRight="FF2222FF" /> -->
+          <!--### CUSTOM CODE ###-->
+          <ColourRectProperty name="CustomRectColor" />
+        </Section>
+      </Layer>
+    </StateImagery>
+    <StateImagery name="DisabledProgress">
+      <Layer>
+        <Section section="progress_lights">
+          <!-- <Colours topLeft="FF2222FF" topRight="FF2222FF" bottomLeft="FF2222FF" bottomRight="FF2222FF" /> -->
+          <!--### CUSTOM CODE ###-->
+          <ColourRectProperty name="CustomRectColor" />
+        </Section>
+      </Layer>
+    </StateImagery>
+  </WidgetLook>
+  
+	<WidgetLook name="BadPrincess/StaticShared">
+        <ImagerySection name="frame">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/TooltipBoxTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/TooltipBoxTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/TooltipBoxBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/TooltipBoxBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/TooltipBoxL"/>
+                <Image component="TopEdge" name="BadPrincessHud/TooltipBoxT"/>
+                <Image component="RightEdge" name="BadPrincessHud/TooltipBoxR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/TooltipBoxB"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="with_frame_background">
+            <ImageryComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <ImageDim name="BadPrincessHud/TooltipBoxL" dimension="Width"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <ImageDim name="BadPrincessHud/TooltipBoxT" dimension="Height"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1.0" type="RightEdge"/>
+                            <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1.0" type="BottomEdge"/>
+                            <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                        </OperatorDim>
+                    </Dim>
+                </Area>
+                <Image name="BadPrincessHud/TooltipBoxM"/>
+                <VertFormat type="Stretched"/>
+                <HorzFormat type="Stretched"/>
+            </ImageryComponent>
+        </ImagerySection>
+        <ImagerySection name="no_frame_background">
+            <ImageryComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image name="BadPrincessHud/TooltipBoxM"/>
+                <VertFormat type="Stretched"/>
+                <HorzFormat type="Stretched"/>
+            </ImageryComponent>
+        </ImagerySection>
+    </WidgetLook> 
+
+	<WidgetLook name="BadPrincess/StaticText">
+        <PropertyLinkDefinition targetProperty="ScrollPosition" widget="__auto_hscrollbar__" type="float" name="HorzScrollPosition"/>
+        <PropertyLinkDefinition targetProperty="PageSize" widget="__auto_hscrollbar__" type="float" name="HorzScrollPageSize"/>
+        <PropertyLinkDefinition targetProperty="DocumentSize" widget="__auto_hscrollbar__" type="float" name="HorzScrollDocumentSize"/>
+        <PropertyLinkDefinition targetProperty="ScrollPosition" widget="__auto_vscrollbar__" type="float" name="VertScrollPosition"/>
+        <PropertyLinkDefinition targetProperty="PageSize" widget="__auto_vscrollbar__" type="float" name="VertScrollPageSize"/>
+        <PropertyLinkDefinition targetProperty="DocumentSize" widget="__auto_vscrollbar__" type="float" name="VertScrollDocumentSize"/>
+        <Property name="BackgroundEnabled" value="True"/>
+        <Property name="FrameEnabled" value="True"/>
+        <Property name="TextColours" value="tl:FF000000 tr:FF000000 bl:FF000000 br:FF000000"/>
+        <Property name="HorzFormatting" value="WordWrapLeftAligned"/>
+        <Property name="Size" value="{{0, 256}, {0, 128}}" />
+        <NamedArea name="WithFrameTextRenderArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="WithFrameTextRenderAreaHScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="WithFrameTextRenderAreaVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="WithFrameTextRenderAreaHVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="NoFrameTextRenderArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <UnifiedDim scale="1.0" type="RightEdge"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <UnifiedDim scale="1.0" type="BottomEdge"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="NoFrameTextRenderAreaHScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <UnifiedDim scale="1.0" type="RightEdge"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="NoFrameTextRenderAreaVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <UnifiedDim scale="1.0" type="BottomEdge"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="NoFrameTextRenderAreaHVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <Child nameSuffix="__auto_hscrollbar__" type="BadPrincess/HorizontalScrollbar">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <OperatorDim op="Subtract">
+                        <AbsoluteDim value="0"/>
+                        <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="Width"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="Height">
+                    <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                </Dim>
+            </Area>
+            <VertAlignment type="BottomAligned"/>
+            <Property name="NonClient" value="True"/>
+        </Child>
+        <Child nameSuffix="__auto_vscrollbar__" type="BadPrincess/VerticalScrollbar">
+            <Area>
+                <Dim type="LeftEdge">
+                    <OperatorDim op="Subtract">
+                        <AbsoluteDim value="0"/>
+                        <ImageDim name="BadPrincessHud/TextBoxR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TextBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="Width">
+                    <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/TextBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+            <HorzAlignment type="RightAligned"/>
+            <Property name="NonClient" value="True"/>
+        </Child>
+        <StateImagery name="Enabled"/>
+        <StateImagery name="Disabled"/>
+        <StateImagery name="EnabledFrame">
+            <Layer>
+                <Section section="frame" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="DisabledFrame">
+            <Layer>
+                <Section section="frame" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="WithFrameEnabledBackground">
+            <Layer>
+                <Section section="with_frame_background" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="WithFrameDisabledBackground">
+            <Layer>
+                <Section section="with_frame_background" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="NoFrameEnabledBackground">
+            <Layer>
+                <Section section="no_frame_background" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="NoFrameDisabledBackground">
+            <Layer>
+                <Section section="no_frame_background" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+
+	
+	<WidgetLook name="BadPrincess/Tooltip">
+        <PropertyLinkDefinition targetProperty="ScrollPosition" widget="__auto_hscrollbar__" type="float" name="HorzScrollPosition"/>
+        <PropertyLinkDefinition targetProperty="PageSize" widget="__auto_hscrollbar__" type="float" name="HorzScrollPageSize"/>
+        <PropertyLinkDefinition targetProperty="DocumentSize" widget="__auto_hscrollbar__" type="float" name="HorzScrollDocumentSize"/>
+        <PropertyLinkDefinition targetProperty="ScrollPosition" widget="__auto_vscrollbar__" type="float" name="VertScrollPosition"/>
+        <PropertyLinkDefinition targetProperty="PageSize" widget="__auto_vscrollbar__" type="float" name="VertScrollPageSize"/>
+        <PropertyLinkDefinition targetProperty="DocumentSize" widget="__auto_vscrollbar__" type="float" name="VertScrollDocumentSize"/>
+        <Property name="BackgroundEnabled" value="True"/>
+        <Property name="FrameEnabled" value="True"/>
+        <Property name="TextColours" value="tl:FF000000 tr:FF000000 bl:FF000000 br:FF000000"/>
+        <Property name="HorzFormatting" value="WordWrapLeftAligned"/>
+        <Property name="Size" value="{{0, 256}, {0, 128}}" />
+        <NamedArea name="WithFrameTextRenderArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="WithFrameTextRenderAreaHScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="WithFrameTextRenderAreaVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="WithFrameTextRenderAreaHVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="NoFrameTextRenderArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <UnifiedDim scale="1.0" type="RightEdge"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <UnifiedDim scale="1.0" type="BottomEdge"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="NoFrameTextRenderAreaHScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <UnifiedDim scale="1.0" type="RightEdge"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="NoFrameTextRenderAreaVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <UnifiedDim scale="1.0" type="BottomEdge"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="NoFrameTextRenderAreaHVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <Child nameSuffix="__auto_hscrollbar__" type="BadPrincess/HorizontalScrollbar">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <OperatorDim op="Subtract">
+                        <AbsoluteDim value="0"/>
+                        <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="Width"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="Height">
+                    <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                </Dim>
+            </Area>
+            <VertAlignment type="BottomAligned"/>
+            <Property name="NonClient" value="True"/>
+        </Child>
+        <Child nameSuffix="__auto_vscrollbar__" type="BadPrincess/VerticalScrollbar">
+            <Area>
+                <Dim type="LeftEdge">
+                    <OperatorDim op="Subtract">
+                        <AbsoluteDim value="0"/>
+                        <ImageDim name="BadPrincessHud/TooltipBoxR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/TooltipBoxT" dimension="Height"/>
+                </Dim>
+                <Dim type="Width">
+                    <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/TooltipBoxB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+            <HorzAlignment type="RightAligned"/>
+            <Property name="NonClient" value="True"/>
+        </Child>
+        <StateImagery name="Enabled"/>
+        <StateImagery name="Disabled"/>
+        <StateImagery name="EnabledFrame">
+            <Layer>
+                <Section section="frame" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="DisabledFrame">
+            <Layer>
+                <Section section="frame" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="WithFrameEnabledBackground">
+            <Layer>
+                <Section section="with_frame_background" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="WithFrameDisabledBackground">
+            <Layer>
+                <Section section="with_frame_background" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="NoFrameEnabledBackground">
+            <Layer>
+                <Section section="no_frame_background" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="NoFrameDisabledBackground">
+            <Layer>
+                <Section section="no_frame_background" look="BadPrincess/StaticShared"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+
+  <WidgetLook name="BadPrincess/VerticalScrollbar">
+        <Property name="VerticalScrollbar" value="True"/>
+        <Property name="WantsMultiClickEvents" value="False"/>
+        <Property name="Size" value="{{0, 32}, {1, 0}}" />
+        <NamedArea name="ThumbTrackArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="1" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="1" type="Height"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <Child nameSuffix="__auto_incbtn__" type="DefaultWindow">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+            </Area>
+            <Property name="Visible" value="False"/>
+        </Child>
+        <Child nameSuffix="__auto_decbtn__" type="DefaultWindow">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+            </Area>
+            <Property name="Visible" value="False"/>
+        </Child>
+        <Child nameSuffix="__auto_thumb__" type="BadPrincess/Thumb">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="1" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="1" type="Width"/>
+                </Dim>
+            </Area>
+            <Property name="VertFree" value="True"/>
+        </Child>
+        <ImagerySection name="main">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <UnifiedDim scale="0.11" type="Width"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <UnifiedDim scale="0.1" type="Width"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="0.78" type="Width"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1" type="BottomEdge"/>
+                            <UnifiedDim scale="0.1" type="Width"/>
+                        </OperatorDim>
+                    </Dim>
+                </Area>
+                <Image component="TopEdge" name="BadPrincessHud/VertTrackT"/>
+                <Image component="BottomEdge" name="BadPrincessHud/VertTrackB"/>
+                <Image component="Background" name="BadPrincessHud/VertTrackM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+	
+	<WidgetLook name="BadPrincess/HorizontalScrollbar">
+        <Property name="VerticalScrollbar" value="False"/>
+        <Property name="WantsMultiClickEvents" value="False"/>
+        <Property name="Size" value="{{1, 0}, {0, 32}}" />
+        <NamedArea name="ThumbTrackArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="1" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="1" type="Height"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <Child nameSuffix="__auto_incbtn__" type="DefaultWindow">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+            </Area>
+            <Property name="Visible" value="False"/>
+        </Child>
+        <Child nameSuffix="__auto_decbtn__" type="DefaultWindow">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+            </Area>
+            <Property name="Visible" value="False"/>
+        </Child>
+        <Child nameSuffix="__auto_thumb__" type="BadPrincess/Thumb">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="1" type="Height"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="1" type="Height"/>
+                </Dim>
+            </Area>
+            <Property name="HorzFree" value="True"/>
+        </Child>
+        <ImagerySection name="main">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <UnifiedDim scale="0.1" type="Height"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <UnifiedDim scale="0.11" type="Height"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1" type="RightEdge"/>
+                            <UnifiedDim scale="0.1" type="Height"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="0.78" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="LeftEdge" name="BadPrincessHud/HorzTrackL"/>
+                <Image component="RightEdge" name="BadPrincessHud/HorzTrackR"/>
+                <Image component="Background" name="BadPrincessHud/HorzTrackM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+	
+	<WidgetLook name="BadPrincess/Thumb">
+        <Property name="Size" value="{{0, 32}, {0, 32}}" />
+        <ImagerySection name="main">
+            <ImageryComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Width"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image name="BadPrincessHud/Handle"/>
+                <VertFormat type="Stretched"/>
+                <HorzFormat type="Stretched"/>
+            </ImageryComponent>
+        </ImagerySection>
+        <StateImagery name="Normal">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Hover">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Pushed">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+	
+	
+	<WidgetLook name="BadPrincess/Combobox">
+        <PropertyLinkDefinition targetProperty="NormalTextColour" widget="__auto_editbox__" initialValue="FF000000" type="ColourRect" name="NormalEditTextColour"/>
+        <PropertyLinkDefinition targetProperty="SelectedTextColour" widget="__auto_editbox__" initialValue="FF000000" type="ColourRect" name="SelectedEditTextColour"/>
+        <Property name="Size" value="{{0, 256}, {0, 256}}" />
+        <Child nameSuffix="__auto_editbox__" type="BadPrincess/Editbox">
+            <Area>
+                <Dim type="LeftEdge">
+                  <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                        <FontDim padding="28" type="LineSpacing"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="Height">
+                    <FontDim padding="28" type="LineSpacing"/>
+                </Dim>
+            </Area>
+        </Child>
+        <Child nameSuffix="__auto_droplist__" type="BadPrincess/ComboDropList">
+            <Area>
+                <Dim type="LeftEdge">
+                  <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <WidgetDim widget="__auto_editbox__" dimension="BottomEdge"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="1" type="Width"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <UnifiedDim scale="1" type="BottomEdge"/>
+                </Dim>
+            </Area>
+            <Property name="ClippedByParent" value="False"/>
+        </Child>
+        <Child nameSuffix="__auto_button__" type="BadPrincess/Button">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <WidgetDim widget="__auto_editbox__" dimension="Height"/>
+                </Dim>
+                <Dim type="Height">
+                    <WidgetDim widget="__auto_editbox__" dimension="Height"/>
+                </Dim>
+            </Area>
+            <HorzAlignment type="RightAligned"/>
+            <Property name="Text" value="V"/>          
+          <Property name="NormalTextColour" value="ffffffff"/>
+          <Property name="HoverTextColour" value="ffffffff"/>
+        </Child>
+        <StateImagery name="Enabled"/>
+        <StateImagery name="Disabled"/>
+    </WidgetLook>
+
+	<WidgetLook name="BadPrincess/Editbox">
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="NormalTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="SelectedTextColour"/>
+        <Property name="Size" value="{{0, 256}, {0, 32}}" />
+        <NamedArea name="TextArea">
+            <Area>
+                <Dim type="LeftEdge">
+                        <ImageDim name="BadPrincessHud/ButtonHoverL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                        <ImageDim name="BadPrincessHud/ButtonHoverT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="Width"/>
+                        <ImageDim name="BadPrincessHud/ButtonHoverR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="Height"/>
+                        <ImageDim name="BadPrincessHud/ButtonHoverB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <ImagerySection name="frame">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Width"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ButtonDownTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ButtonDownTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ButtonDownBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ButtonDownBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ButtonDownL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ButtonDownT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ButtonDownR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ButtonDownB"/>
+                <Image component="Background" name="BadPrincessHud/ButtonDownM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="selection">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Width"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ButtonTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ButtonTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ButtonBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ButtonBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ButtonL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ButtonT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ButtonR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ButtonB"/>
+                <Image component="Background" name="BadPrincessHud/ButtonM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="Caret">
+            <ImageryComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <AbsoluteDim value="2"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image name="OgreTrayImages/GenericBrush"/>
+                <Colours topLeft="FF22AA33" bottomLeft="FF22AA33" topRight="FF22AA33" bottomRight="FF22AA33"/>
+                <VertFormat type="Stretched"/>
+                <HorzFormat type="Stretched"/>
+            </ImageryComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="frame"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="ReadOnly">
+            <Layer>
+                <Section section="frame"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="frame"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="ActiveSelection">
+            <Layer>
+                <Section section="selection"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="InactiveSelection">
+            <Layer>
+                <Section section="selection"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+	
+	
+	<WidgetLook name="BadPrincess/Listbox">
+        <Property name="Size" value="{{0, 256}, {0, 256}}" />
+        <NamedArea name="ItemRenderingArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/ButtonL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/ButtonT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <ImageDim name="BadPrincessHud/ButtonR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/ButtonB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="ItemRenderingAreaHScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/ButtonL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/ButtonT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <ImageDim name="BadPrincessHud/ButtonR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/ButtonB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="ItemRenderingAreaVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/ButtonL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/ButtonT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/ButtonR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/ButtonB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <NamedArea name="ItemRenderingAreaHVScroll">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/ButtonL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/ButtonT" dimension="Height"/>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="RightEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/ButtonR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1.0" type="BottomEdge"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/ButtonB" dimension="Height"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <Child nameSuffix="__auto_hscrollbar__" type="OgreTray/HorizontalScrollbar">
+            <Area>
+                <Dim type="LeftEdge">
+                    <ImageDim name="BadPrincessHud/ButtonL" dimension="Width"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <OperatorDim op="Subtract">
+                        <AbsoluteDim value="0"/>
+                        <ImageDim name="BadPrincessHud/ButtonB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="RightEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="Width"/>
+                        <OperatorDim op="Add">
+                            <ImageDim name="BadPrincessHud/ButtonR" dimension="Width"/>
+                            <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                        </OperatorDim>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="Height">
+                    <ImageDim name="BadPrincessHud/Handle" dimension="Height"/>
+                </Dim>
+            </Area>
+            <VertAlignment type="BottomAligned"/>
+            <Property name="Size" value="{{1, 0}, {0, 32}}" />
+            <Property name="NonClient" value="True"/>
+        </Child>
+        <Child nameSuffix="__auto_vscrollbar__" type="OgreTray/VerticalScrollbar">
+            <Area>
+                <Dim type="LeftEdge">
+                    <OperatorDim op="Subtract">
+                        <AbsoluteDim value="0"/>
+                        <ImageDim name="BadPrincessHud/ButtonR" dimension="Width"/>
+                    </OperatorDim>
+                </Dim>
+                <Dim type="TopEdge">
+                    <ImageDim name="BadPrincessHud/ButtonT" dimension="Height"/>
+                </Dim>
+                <Dim type="Width">
+                    <ImageDim name="BadPrincessHud/Handle" dimension="Width"/>
+                </Dim>
+                <Dim type="BottomEdge">
+                    <OperatorDim op="Subtract">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                        <ImageDim name="BadPrincessHud/ButtonB" dimension="Height"/>
+                    </OperatorDim>
+                </Dim>
+            </Area>
+            <HorzAlignment type="RightAligned"/>
+            <Property name="NonClient" value="True"/>
+        </Child>
+        <ImagerySection name="main">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="RightEdge"/>
+                    </Dim>
+                    <Dim type="BottomEdge">
+                        <UnifiedDim scale="1" type="BottomEdge"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ButtonTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ButtonTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ButtonBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ButtonBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ButtonL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ButtonT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ButtonR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ButtonB"/>
+                <Image component="Background" name="BadPrincessHud/ButtonM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+	
+	<WidgetLook name="BadPrincess/Slider">
+        <Property name="VerticalSlider" value="False"/>
+        <Property name="MouseAutoRepeatEnabled" value="True"/>
+        <Property name="WantsMultiClickEvents" value="False"/>
+        <Property name="Size" value="{{0, 256}, {0, 32}}" />
+        <NamedArea name="ThumbTrackArea">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="1" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="1" type="Height"/>
+                </Dim>
+            </Area>
+        </NamedArea>
+        <Child nameSuffix="__auto_incbtn__" type="DefaultWindow">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+            </Area>
+            <Property name="Visible" value="False"/>
+        </Child>
+        <Child nameSuffix="__auto_decbtn__" type="DefaultWindow">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="0" type="Width"/>
+                </Dim>
+            </Area>
+            <Property name="Visible" value="False"/>
+        </Child>
+        <Child nameSuffix="__auto_thumb__" type="OgreTray/Thumb">
+            <Area>
+                <Dim type="LeftEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="TopEdge">
+                    <AbsoluteDim value="0"/>
+                </Dim>
+                <Dim type="Width">
+                    <UnifiedDim scale="1" type="Height"/>
+                </Dim>
+                <Dim type="Height">
+                    <UnifiedDim scale="1" type="Height"/>
+                </Dim>
+            </Area>
+            <Property name="HorzFree" value="True"/>
+        </Child>
+        <ImagerySection name="main">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <UnifiedDim scale="0.1" type="Height"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <UnifiedDim scale="0.11" type="Height"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1" type="RightEdge"/>
+                            <UnifiedDim scale="0.1" type="Height"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="0.78" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="LeftEdge" name="BadPrincessHud/HorzTrackL"/>
+                <Image component="RightEdge" name="BadPrincessHud/HorzTrackR"/>
+                <Image component="Background" name="BadPrincessHud/HorzTrackM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <StateImagery name="Enabled">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Disabled">
+            <Layer>
+                <Section section="main"/>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+	
+	<WidgetLook name="BadPrincess/Checkbox">
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="NormalTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="HoverTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="PushedTextColour"/>
+        <PropertyDefinition redrawOnWrite="true" initialValue="FF000000" type="ColourRect" name="DisabledTextColour"/>
+        <Property name="Size" value="{{0, 128}, {0, 32}}" />
+        <ImagerySection name="label">
+            <TextComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="RightEdge">
+                        <UnifiedDim scale="1" type="Width"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <VertFormat type="CentreAligned"/>
+                <HorzFormat type="LeftAligned"/>
+            </TextComponent>
+        </ImagerySection>
+        <ImagerySection name="normal">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1" type="Width"/>
+                            <UnifiedDim scale="1" type="Height"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ButtonTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ButtonTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ButtonBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ButtonBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ButtonL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ButtonT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ButtonR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ButtonB"/>
+                <Image component="Background" name="BadPrincessHud/ButtonM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="hover">
+            <FrameComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1" type="Width"/>
+                            <UnifiedDim scale="1" type="Height"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Image component="TopLeftCorner" name="BadPrincessHud/ButtonHoverTL"/>
+                <Image component="TopRightCorner" name="BadPrincessHud/ButtonHoverTR"/>
+                <Image component="BottomLeftCorner" name="BadPrincessHud/ButtonHoverBL"/>
+                <Image component="BottomRightCorner" name="BadPrincessHud/ButtonHoverBR"/>
+                <Image component="LeftEdge" name="BadPrincessHud/ButtonHoverL"/>
+                <Image component="TopEdge" name="BadPrincessHud/ButtonHoverT"/>
+                <Image component="RightEdge" name="BadPrincessHud/ButtonHoverR"/>
+                <Image component="BottomEdge" name="BadPrincessHud/ButtonHoverB"/>
+                <Image component="Background" name="BadPrincessHud/ButtonHoverM"/>
+            </FrameComponent>
+        </ImagerySection>
+        <ImagerySection name="select_mark">
+            <TextComponent>
+                <Area>
+                    <Dim type="LeftEdge">
+                        <OperatorDim op="Subtract">
+                            <UnifiedDim scale="1" type="Width"/>
+                            <UnifiedDim scale="1" type="Height"/>
+                        </OperatorDim>
+                    </Dim>
+                    <Dim type="TopEdge">
+                        <AbsoluteDim value="0"/>
+                    </Dim>
+                    <Dim type="Width">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                    <Dim type="Height">
+                        <UnifiedDim scale="1" type="Height"/>
+                    </Dim>
+                </Area>
+                <Text string="X"/>
+                <Colours topLeft="FFffffff" bottomLeft="FFffffff" topRight="FFffffff" bottomRight="FFffffff"/>
+                <VertFormat type="CentreAligned"/>
+                <HorzFormat type="CentreAligned"/>
+            </TextComponent>
+        </ImagerySection>
+        <StateImagery name="Normal">
+            <Layer>
+                <Section section="normal"/>
+                <Section section="label">
+                    <ColourProperty name="NormalTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="Hover">
+            <Layer>
+                <Section section="hover"/>
+                <Section section="label">
+                    <ColourProperty name="HoverTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="SelectedNormal">
+            <Layer>
+                <Section section="normal"/>
+                <Section section="select_mark"/>
+                <Section section="label">
+                    <ColourProperty name="NormalTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+        <StateImagery name="SelectedHover">
+            <Layer>
+                <Section section="hover"/>
+                <Section section="select_mark"/>
+                <Section section="label">
+                    <ColourProperty name="HoverTextColour"/>
+                </Section>
+            </Layer>
+        </StateImagery>
+    </WidgetLook>
+	
+	</Falagard>

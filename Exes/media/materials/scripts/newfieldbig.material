@@ -1,0 +1,22 @@
+import * from "FogOfWar.material"
+material Material#26
+{
+	technique FogOfWar
+	{
+		pass FogOfWar
+		{
+			ambient 0 0 0 0
+			diffuse 1 1 1 1 1
+			specular 1 1 1 100 20
+			emissive 0 0 0 0
+
+			texture_unit
+			{
+				texture grasstex.png
+				filtering linear linear linear
+			}
+		}		
+
+	}
+
+}

@@ -1,0 +1,89 @@
+material mudtrap_pot
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit
+			{
+				texture mudtrap_pot.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material mudtrap_ropes
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit
+			{
+				texture mudtrap_rope.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material mudtrap_stick
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+			
+			texture_unit
+			{
+				texture mudtrap_stick.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material mudtrap_wood
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit
+			{
+				texture mudtrap_stick2.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7BBE92AD-192A-42DB-9B43-829EE3B07E81}</ProjectGuid>
+    <RootNamespace>AI</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\Src;../../dependencies/include/OGRE;../../dependencies/include/OIS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4275;4251;4193;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\Src;../../dependencies/include/OGRE;../../dependencies/include/OIS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4275;4251;4193;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Src\AI\ActionNode.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\BlockCameraAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\ChangeAttackAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\CheckAbilityUsed.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\CheckDistanceBetweenEntities.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\CheckResourceUnits.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\CheckSelectedTypes.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\CheckSelectedUnits.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\CheckWaveEndedAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\CreateEntityAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\DefendToWaveAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\DeleteEntityAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\EntityAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\FollowEntityAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\GatherResourceAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\ImmortalUnitAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\IncrementsWavesCounter.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\KillAllEnemiesAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\RemoveMessageAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\SetAbilityIsEnabledAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\SetClickIsEnabledAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\LockMouseAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\MoveCameraAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\SendMessageAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\ShowMessageAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\SurvivorAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\TimerAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\TimedSurvivorAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\UnselectEntitiesAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\Actions\WaitTimeAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\AStarFunctionsGaleon.cpp" />
+    <ClCompile Include="..\..\Src\AI\DisjointSets.cpp" />
+    <ClCompile Include="..\..\Src\AI\DynamicMovement.cpp" />
+    <ClCompile Include="..\..\Src\AI\EntityManager.cpp" />
+    <ClCompile Include="..\..\Src\AI\GameManager.cpp" />
+    <ClCompile Include="..\..\Src\AI\KinematicMovement.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAAttackEnemy.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAChaseCarriedEntity.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAChaseEnemy.cpp" />
+    <ClCompile Include="..\..\Src\AI\LADie.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAExecuteSM.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAFaint.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAGameOver.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAGatherMenu.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAIdle.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAIdleMenu.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAKidnappingPrincess.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAMoveTo.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAProtectKnight.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAReachSO.cpp" />
+    <ClCompile Include="..\..\Src\AI\LARequestSO.cpp" />
+    <ClCompile Include="..\..\Src\AI\LASetTrap.cpp" />
+    <ClCompile Include="..\..\Src\AI\LABuild.cpp" />
+    <ClCompile Include="..\..\Src\AI\LASpawn.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAStunned.cpp" />
+    <ClCompile Include="..\..\Src\AI\LATaken.cpp" />
+    <ClCompile Include="..\..\Src\AI\LatentAction.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAThief\LAThiefDecision.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAThief\LAThiefInteractSO.cpp" />
+    <ClCompile Include="..\..\Src\AI\LACarryEntity.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAWaitCarriedEntity.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAWaiting.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAWaitBuild.cpp" />
+    <ClCompile Include="..\..\Src\AI\LAWorkmanInteractSO.cpp" />
+    <ClCompile Include="..\..\Src\AI\micropather.cpp" />
+    <ClCompile Include="..\..\Src\AI\Movement.cpp" />
+    <ClCompile Include="..\..\Src\AI\ResourceServer.cpp" />
+    <ClCompile Include="..\..\Src\AI\Server.cpp" />
+    <ClCompile Include="..\..\Src\AI\StrategyController.cpp" />
+    <ClCompile Include="..\..\Src\AI\UndirectedGraph.cpp" />
+    <ClCompile Include="..\..\Src\AI\Wave.cpp" />
+    <ClCompile Include="..\..\Src\AI\WaveManager.cpp" />
+    <ClCompile Include="..\..\Src\AI\WaypointGraph.cpp" />
+    <ClCompile Include="..\..\Src\AI\WaypointsPathLearning.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Src\AI\ActionNode.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\BlockCameraAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\ChangeAttackAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\CheckAbilityUsed.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\CheckDistanceBetweenEntities.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\CheckResourceUnits.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\CheckSelectedTypes.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\CheckSelectedUnits.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\CheckWaveEndedAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\CreateEntityAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\DefendToWaveAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\DeleteEntityAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\EntityAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\FollowEntityAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\GatherResourceAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\ImmortalUnitAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\IncrementsWavesCounter.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\KillAllEnemiesAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\RemoveMessageAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\SetAbilityIsEnabledAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\SetClickIsEnabledAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\LockMouseAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\MoveCameraAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\SendMessageAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\ShowMessageAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\SurvivorAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\TimerAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\TimedSurvivorAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\UnselectEntitiesAction.h" />
+    <ClInclude Include="..\..\Src\AI\Actions\WaitTimeAction.h" />
+    <ClInclude Include="..\..\Src\AI\AStarFunctionsGaleon.h" />
+    <ClInclude Include="..\..\Src\AI\Condition.h" />
+    <ClInclude Include="..\..\Src\AI\DisjointSets.h" />
+    <ClInclude Include="..\..\Src\AI\DynamicMovement.h" />
+    <ClInclude Include="..\..\Src\AI\DynTriMat.h" />
+    <ClInclude Include="..\..\Src\AI\EntityManager.h" />
+    <ClInclude Include="..\..\Src\AI\GameManager.h" />
+    <ClInclude Include="..\..\Src\AI\KinematicMovement.h" />
+    <ClInclude Include="..\..\Src\AI\LAAttackEnemy.h" />
+    <ClInclude Include="..\..\Src\AI\LAChaseCarriedEntity.h" />
+    <ClInclude Include="..\..\Src\AI\LAChaseEnemy.h" />
+    <ClInclude Include="..\..\Src\AI\LADie.h" />
+    <ClInclude Include="..\..\Src\AI\LAExecuteSM.h" />
+    <ClInclude Include="..\..\Src\AI\LAFaint.h" />
+    <ClInclude Include="..\..\Src\AI\LAGameOver.h" />
+    <ClInclude Include="..\..\Src\AI\LAGatherMenu.h" />
+    <ClInclude Include="..\..\Src\AI\LAIdle.h" />
+    <ClInclude Include="..\..\Src\AI\LAIdleMenu.h" />
+    <ClInclude Include="..\..\Src\AI\LAKidnappingPrincess.h" />
+    <ClInclude Include="..\..\Src\AI\LAMoveTo.h" />
+    <ClInclude Include="..\..\Src\AI\LAProtectKnight.h" />
+    <ClInclude Include="..\..\Src\AI\LAReachSO.h" />
+    <ClInclude Include="..\..\Src\AI\LARequestSO.h" />
+    <ClInclude Include="..\..\Src\AI\LASetTrap.h" />
+    <ClInclude Include="..\..\Src\AI\LABuild.h" />
+    <ClInclude Include="..\..\Src\AI\LASpawn.h" />
+    <ClInclude Include="..\..\Src\AI\LAStunned.h" />
+    <ClInclude Include="..\..\Src\AI\LATaken.h" />
+    <ClInclude Include="..\..\Src\AI\LatentAction.h" />
+    <ClInclude Include="..\..\Src\AI\LAThief\LAThiefDecision.h" />
+    <ClInclude Include="..\..\Src\AI\LAThief\LAThiefInteractSO.h" />
+    <ClInclude Include="..\..\Src\AI\LACarryEntity.h" />
+    <ClInclude Include="..\..\Src\AI\LAWaitCarriedEntity.h" />
+    <ClInclude Include="..\..\Src\AI\LAWaiting.h" />
+    <ClInclude Include="..\..\Src\AI\LAWaitBuild.h" />
+    <ClInclude Include="..\..\Src\AI\LAWorkmanInteractSO.h" />
+    <ClInclude Include="..\..\Src\AI\micropather.h" />
+    <ClInclude Include="..\..\Src\AI\Movement.h" />
+    <ClInclude Include="..\..\Src\AI\ResourceServer.h" />
+    <ClInclude Include="..\..\Src\AI\Server.h" />
+    <ClInclude Include="..\..\Src\AI\StateMachine.h" />
+    <ClInclude Include="..\..\Src\AI\StrategyController.h" />
+    <ClInclude Include="..\..\Src\AI\UndirectedGraph.h" />
+    <ClInclude Include="..\..\Src\AI\Wave.h" />
+    <ClInclude Include="..\..\Src\AI\WaveManager.h" />
+    <ClInclude Include="..\..\Src\AI\WaypointGraph.h" />
+    <ClInclude Include="..\..\Src\AI\WaypointsPathLearning.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

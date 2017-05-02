@@ -1,0 +1,86 @@
+system spawn
+{
+    keep_local                                  true
+    scale_velocity                              0.01
+    scale                                       0.01 0.01 0.01
+    technique 
+    {
+        visual_particle_quota                   20
+        material                                mp_spell_stripe
+        default_particle_width                  200
+        default_particle_height                 200
+        default_particle_depth                  200
+        renderer                                Sphere
+        {
+        }
+        emitter                                 Point 
+        {
+            angle                               0
+            time_to_live                        0.5
+            velocity                            300
+            duration                            1
+            colour                              0.25098 0 0.501961 1
+        }
+        emitter                                 Point 
+        {
+            angle                               0
+            time_to_live                        0.5
+            velocity                            300
+            duration                            1
+            direction                           0 -1 0
+            colour                              0.25098 0 0.501961 1
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.5  1 1 1 1
+            time_colour                         1    1 1 1 0
+            colour_operation                    multiply
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   170
+        material                                mp_spell_flare_03
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Circle 
+        {
+            emission_rate                       200
+            angle                               180
+            time_to_live                        dyn_random
+            {
+                min                             0.5
+                max                             1
+            }
+            velocity                            dyn_random
+            {
+                min                             20
+                max                             50
+            }
+            duration                            1
+            all_particle_dimensions             dyn_random
+            {
+                min                             20
+                max                             80
+            }
+            direction                           0 -1 0
+            colour                              0.501961 0 1 1
+            normal                              0 1 0
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.5  1 1 1 1
+            time_colour                         1    0 0 0 1
+            colour_operation                    multiply
+        }
+        observer                                OnClear 
+        {
+            handler                             DoStopSystem 
+            {
+            }
+        }
+    }
+}

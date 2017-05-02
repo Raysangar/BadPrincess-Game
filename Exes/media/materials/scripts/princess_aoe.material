@@ -1,0 +1,16 @@
+
+material princess_aoe
+{
+    technique
+    {
+        pass
+        { 			
+            texture_unit
+            {
+				texture corrupted_aura.png  
+				rotate_anim 0.02 	
+					 		
+            }
+        }       
+    }
+}

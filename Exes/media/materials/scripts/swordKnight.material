@@ -1,0 +1,20 @@
+material material_swordKnight
+{
+	technique technique_swordKnight
+	{
+		pass pass_swordKnight
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit texture_swordKnight
+			{
+				texture sword_diffuse.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

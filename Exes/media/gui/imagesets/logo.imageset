@@ -1,0 +1,3 @@
+<Imageset autoScaled="vertical" imagefile="Logo.png" name="logo" nativeHorzRes="1280" nativeVertRes="720" version="2">
+    <Image height="609" name="logo" width="950" xPos="0" yPos="0" />
+</Imageset>

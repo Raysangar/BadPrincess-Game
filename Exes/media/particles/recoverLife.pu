@@ -1,0 +1,27 @@
+system recoverLife
+{
+    technique 
+    {
+        emitted_emitter_quota                   100
+        material                                mp_spell_flare_01
+        default_particle_width                  0.520423
+        default_particle_height                 0.520423
+        default_particle_depth                  0.520423
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Circle recover_life
+        {
+            emission_rate                       25
+            time_to_live                        6
+            velocity                            1.5
+            all_particle_dimensions             1
+            radius                              1.3
+        }
+        affector                                Colour Affector74
+        {
+            time_colour                         0    0.109804 0.4 0.882353 1
+            time_colour                         1    0.541176 0.760784 0.890196 1
+        }
+    }
+}

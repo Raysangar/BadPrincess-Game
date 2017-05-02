@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+  <Window type="DefaultWindow" name="Help" >
+    <Property name="Area" value="{{-1,0},{0,0},{0,0},{1,0}}" />
+    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+
+    <Window type="BadPrincess/Label" name="UnitLabel" >
+      <Property name="Area" value="{{0.5,0},{0.05,0},{0.8,0},{0.1,0}}" />
+      <Property name="Text" value="Selected unit commands:" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+
+    <Window type="BadPrincess/Label" name="KeyQLabel" >
+      <Property name="Area" value="{{0.5,0},{0.12,0},{0.8,0},{0.17,0}}" />
+      <Property name="Text" value="Ability 1" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+  	<Window type="BadPrincess/LabelShortcut" name ="KeyQ">	
+      <Property name="Area" value="{{0.85,0},{0.12,0},{0.9,0},{0.17,0}}" />
+		  <Property name="AlwaysOnTop" value="True" />		
+		  <Property name="Visible" value="True" />	
+		  <Property name="Font" value="Girls-20" />	
+		  <Property name="Text" value="Q" />
+  </Window>
+    <Window type="BadPrincess/Label" name="KeyWLabel" >
+      <Property name="Area" value="{{0.5,0},{0.19,0},{0.8,0},{0.24,0}}" />
+      <Property name="Text" value="Ability 2" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyW">
+      <Property name="Area" value="{{0.85,0},{0.19,0},{0.9,0},{0.24,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="W" />
+    </Window>
+    <Window type="BadPrincess/Label" name="KeyELabel" >
+      <Property name="Area" value="{{0.5,0},{0.26,0},{0.8,0},{0.31,0}}" />
+      <Property name="Text" value="Ability 3" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyE">
+      <Property name="Area" value="{{0.85,0},{0.26,0},{0.9,0},{0.31,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="E" />
+    </Window>
+    <Window type="BadPrincess/Label" name="KeyRLabel" >
+      <Property name="Area" value="{{0.5,0},{0.33,0},{0.8,0},{0.38,0}}" />
+      <Property name="Text" value="Ability 4" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyR">
+      <Property name="Area" value="{{0.85,0},{0.33,0},{0.9,0},{0.38,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="R" />
+    </Window>
+    <Window type="BadPrincess/Label" name="KeyTabLabel" >
+      <Property name="Area" value="{{0.5,0},{0.4,0},{0.8,0},{0.45,0}}" />
+      <Property name="Text" value="Change unit" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyTab">
+      <Property name="Area" value="{{0.85,0},{0.4,0},{0.9,0},{0.45,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="TAB" />
+    </Window>
+    <Window type="BadPrincess/Label" name="KeyCtrlClickLabel" >
+      <Property name="Area" value="{{0.5,0},{0.47,0},{0.8,0},{0.52,0}}" />
+      <Property name="Text" value="Remove unit from selection" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyCtrlClick">
+      <Property name="Area" value="{{0.8,0},{0.47,0},{0.95,0},{0.52,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="Ctrl + Left click" />
+    </Window>
+
+    <!--  Left column-->
+   <Window type="BadPrincess/Label" name="CameraLabel" >
+      <Property name="Area" value="{{0.0,0},{0.05,0},{0.4,0},{0.1,0}}" />
+      <Property name="Text" value="Camera commands:" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+
+    <Window type="BadPrincess/Label" name="ZoomInLabel" >
+      <Property name="Area" value="{{0.0,0},{0.12,0},{0.4,0},{0.17,0}}" />
+      <Property name="Text" value="Zoom In" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+  	<Window type="BadPrincess/LabelShortcut" name ="KeyZoomIn">	
+      <Property name="Area" value="{{0.45,0},{0.12,0},{0.5,0},{0.17,0}}" />
+		  <Property name="AlwaysOnTop" value="True" />		
+		  <Property name="Visible" value="True" />	
+		  <Property name="Font" value="Girls-20" />	
+		  <Property name="Text" value="+" />
+  </Window>
+    <Window type="BadPrincess/Label" name="ZoomOutLabel" >
+      <Property name="Area" value="{{0.0,0},{0.19,0},{0.4,0},{0.24,0}}" />
+      <Property name="Text" value="Zoom Out" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyZoomOut">
+      <Property name="Area" value="{{0.45,0},{0.19,0},{0.5,0},{0.24,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="-" />
+    </Window>
+    <Window type="BadPrincess/Label" name="MoveUpLabel" >
+      <Property name="Area" value="{{0.0,0},{0.26,0},{0.4,0},{0.31,0}}" />
+      <Property name="Text" value="Move Up" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyMoveUp">
+      <Property name="Area" value="{{0.45,0},{0.26,0},{0.5,0},{0.31,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="Up" />
+    </Window>
+    <Window type="BadPrincess/Label" name="MoveDownLabel" >
+      <Property name="Area" value="{{0.0,0},{0.33,0},{0.4,0},{0.38,0}}" />
+      <Property name="Text" value="Move Down" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyMoveDown">
+      <Property name="Area" value="{{0.45,0},{0.33,0},{0.5,0},{0.38,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="Down" />
+    </Window>
+    <Window type="BadPrincess/Label" name="MoveLeftLabel" >
+      <Property name="Area" value="{{0.0,0},{0.4,0},{0.4,0},{0.45,0}}" />
+      <Property name="Text" value="Move Left" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyMoveLeft">
+      <Property name="Area" value="{{0.45,0},{0.4,0},{0.5,0},{0.45,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="Left" />
+    </Window>    
+    <Window type="BadPrincess/Label" name="MoveRightLabel" >
+      <Property name="Area" value="{{0.0,0},{0.47,0},{0.4,0},{0.52,0}}" />
+      <Property name="Text" value="Move Right" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyMoveRight">
+      <Property name="Area" value="{{0.45,0},{0.47,0},{0.5,0},{0.52,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="Right" />
+    </Window>    
+    <Window type="BadPrincess/Label" name="MoveSelectedLabel" >
+      <Property name="Area" value="{{0.0,0},{0.54,0},{0.4,0},{0.59,0}}" />
+      <Property name="Text" value="Move to selected unit" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFffffff" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyMoveSelected">
+      <Property name="Area" value="{{0.45,0},{0.54,0},{0.5,0},{0.59,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="Space" />
+    </Window>
+
+    <Window type="BadPrincess/Label" name="GeneralLabel" >
+      <Property name="Area" value="{{0.0,0},{0.65,0},{0.4,0},{0.7,0}}" />
+      <Property name="Text" value="General commands:" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFFFFFFF" />
+    </Window>
+    <Window type="BadPrincess/Label" name="EscLabel" >
+      <Property name="Area" value="{{0.0,0},{0.72,0},{0.4,0},{0.77,0}}" />
+      <Property name="Text" value="Menu/Back" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFFFFFFF" />
+    </Window>
+    <Window type="BadPrincess/LabelShortcut" name ="KeyEsc">
+      <Property name="Area" value="{{0.45,0},{0.72,0},{0.5,0},{0.77,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+      <Property name="Visible" value="True" />
+      <Property name="Font" value="Girls-20" />
+      <Property name="Text" value="Esc" />
+    </Window>
+
+
+    <Window type="BadPrincess/Button" name="Back" >
+        <Property name="Area" value="{{0.6,0},{0.8,0},{0.9,0},{0.9,0}}" />
+        <Property name="Text" value="Back" />
+        <Property name="AlwaysOnTop" value="True" />
+      <Property name="NormalTextColour" value="FFF3EDFA" />
+      <Property name="HoverTextColour" value="FFF3EDFA" />
+      <Property name="PushedTextColour" value="FFF3EDFA" />
+    </Window>
+  </Window>
+</GUILayout>

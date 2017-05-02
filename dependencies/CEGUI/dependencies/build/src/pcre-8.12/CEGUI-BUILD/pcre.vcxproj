@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{EB68D06C-D7C2-4BA3-BDCD-56872A1C336D}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>pcre</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pcre.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pcre_d</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pcre.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pcre</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">pcre.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">pcre</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">pcre.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">pcre</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;HAVE_WINDOWS_H;HAVE_ZLIB_H;SUPPORT_UTF8;HAVE_CONFIG_H;HAVE_STDINT_H=0;HAVE_INTTYPES_H=0;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";pcre_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/bin/pcre_d.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;HAVE_WINDOWS_H;HAVE_ZLIB_H;SUPPORT_UTF8;HAVE_CONFIG_H;HAVE_STDINT_H=0;HAVE_INTTYPES_H=0;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";pcre_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>	</Message>
+      <Command>setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -E copy L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/../pcre.h L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include/pcre.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -E copy L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/../LICENCE L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/pcre-license.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\dependencies\lib\dynamic\zlib_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/lib/dynamic/pcre_d.lib</ImportLibrary>
+      <ProgramDataBaseFile>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/bin/pcre_d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_WINDOWS_H;HAVE_ZLIB_H;SUPPORT_UTF8;HAVE_CONFIG_H;HAVE_STDINT_H=0;HAVE_INTTYPES_H=0;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";pcre_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/bin/pcre.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_WINDOWS_H;HAVE_ZLIB_H;SUPPORT_UTF8;HAVE_CONFIG_H;HAVE_STDINT_H=0;HAVE_INTTYPES_H=0;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";pcre_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>	</Message>
+      <Command>setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -E copy L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/../pcre.h L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include/pcre.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -E copy L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/../LICENCE L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/pcre-license.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\dependencies\lib\dynamic\zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/lib/dynamic/pcre.lib</ImportLibrary>
+      <ProgramDataBaseFile>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/bin/pcre.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_WINDOWS_H;HAVE_ZLIB_H;SUPPORT_UTF8;HAVE_CONFIG_H;HAVE_STDINT_H=0;HAVE_INTTYPES_H=0;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";pcre_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/bin/pcre.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_WINDOWS_H;HAVE_ZLIB_H;SUPPORT_UTF8;HAVE_CONFIG_H;HAVE_STDINT_H=0;HAVE_INTTYPES_H=0;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";pcre_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>	</Message>
+      <Command>setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -E copy L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/../pcre.h L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include/pcre.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -E copy L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/../LICENCE L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/pcre-license.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\dependencies\lib\dynamic\zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/lib/dynamic/pcre.lib</ImportLibrary>
+      <ProgramDataBaseFile>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/bin/pcre.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_WINDOWS_H;HAVE_ZLIB_H;SUPPORT_UTF8;HAVE_CONFIG_H;HAVE_STDINT_H=0;HAVE_INTTYPES_H=0;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";pcre_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/bin/pcre.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_WINDOWS_H;HAVE_ZLIB_H;SUPPORT_UTF8;HAVE_CONFIG_H;HAVE_STDINT_H=0;HAVE_INTTYPES_H=0;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";pcre_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/..;L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>	</Message>
+      <Command>setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -E copy L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/../pcre.h L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/include/pcre.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -E copy L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/../LICENCE L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/pcre-license.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\..\dependencies\lib\dynamic\zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/lib/dynamic/pcre.lib</ImportLibrary>
+      <ProgramDataBaseFile>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/bin/pcre.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/pcre-8.12/CEGUI-BUILD/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\pcre-8.12\CEGUI-BUILD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\CMakeFiles\c5a9816b1b4abbf9ac971a2ea1174ffa\pcre_chartables.c.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ../pcre_chartables.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+..\dftables.exe L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/pcre-8.12/CEGUI-BUILD/../pcre_chartables.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/CMakeFiles/c5a9816b1b4abbf9ac971a2ea1174ffa/pcre_chartables.c.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\..\pcre_chartables.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ../pcre_chartables.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+..\dftables.exe L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/pcre-8.12/CEGUI-BUILD/../pcre_chartables.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/CMakeFiles/c5a9816b1b4abbf9ac971a2ea1174ffa/pcre_chartables.c.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\..\pcre_chartables.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ../pcre_chartables.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+..\dftables.exe L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/pcre-8.12/CEGUI-BUILD/../pcre_chartables.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/CMakeFiles/c5a9816b1b4abbf9ac971a2ea1174ffa/pcre_chartables.c.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\..\pcre_chartables.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ../pcre_chartables.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+..\dftables.exe L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/pcre-8.12/CEGUI-BUILD/../pcre_chartables.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/CMakeFiles/c5a9816b1b4abbf9ac971a2ea1174ffa/pcre_chartables.c.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\pcre-8.12\CEGUI-BUILD\..\pcre_chartables.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_compile.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_config.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_dfa_exec.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_exec.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_fullinfo.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_get.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_globals.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_info.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_maketables.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_newline.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_ord2utf8.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_refcount.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_study.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_tables.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_try_flipped.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_ucd.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_valid_utf8.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_version.c"  />
+    <ClCompile Include="..\..\..\..\src\pcre-8.12\pcre_xclass.c"  />
+    <ClCompile Include="..\pcre_chartables.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/ZERO_CHECK.vcxproj">
+      <Project>1E94D217-526D-4F6A-8A10-B1D322B0ADA6</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/pcre-8.12/CEGUI-BUILD/dftables.vcxproj">
+      <Project>45B800DD-3FE3-48C1-8A32-4A1C18697583</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/zlib-1.2.5/CEGUI-BUILD/zlib.vcxproj">
+      <Project>E50260EF-D171-4397-84C6-AF53FEAB0E0F</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

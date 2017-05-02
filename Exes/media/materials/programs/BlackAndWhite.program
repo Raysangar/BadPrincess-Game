@@ -1,0 +1,6 @@
+fragment_program BlackAndWhite_hlsl hlsl
+{
+	source BlackAndWhite.hlsl
+	entry_point main_fp
+	target ps_2_0
+}

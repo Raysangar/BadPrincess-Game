@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Maps">
+      <UniqueIdentifier>{ca38a90d-e0c2-43cb-84f4-3492d4693f17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maps\Source Files">
+      <UniqueIdentifier>{dd68b4c5-41da-4e9d-b064-4ae065e3ccef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maps\Header Files">
+      <UniqueIdentifier>{320db237-96cd-4066-90fc-d696d208ff57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{05994364-9d20-405c-8c14-2757dfa1104b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Source Files">
+      <UniqueIdentifier>{0e8edd8a-2878-4e33-9aa8-bcf3b46137d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Entity\Components">
+      <UniqueIdentifier>{e9ceafce-bc53-40d2-a4a3-6ebdb6c987aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Source Files">
+      <UniqueIdentifier>{0d3eb664-af15-498e-9e00-23d67b9c271e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Header Files">
+      <UniqueIdentifier>{40d43982-4d6f-4a4a-b427-ce5753f432e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Header Files\Messages">
+      <UniqueIdentifier>{73c566f7-8573-4add-baaf-ee8514d91cbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Header Files\Graphics Components">
+      <UniqueIdentifier>{f705f141-d8c8-4630-96b9-385d09860921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Header Files\Physics Components">
+      <UniqueIdentifier>{29253fb7-e470-4d2d-b259-e2386ec7532b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Header Files\AI Components">
+      <UniqueIdentifier>{5982f14e-91e1-4d67-9016-1226b8b83ee6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Header Files\Logic Components">
+      <UniqueIdentifier>{b1ef218b-df3e-4c10-a233-f2279a4b794d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Source Files\Graphics Components">
+      <UniqueIdentifier>{135c5064-5dd5-436d-920f-b76afcd23016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Source Files\Physics Components">
+      <UniqueIdentifier>{81903167-fe35-4b0c-8b45-3e2403d6adb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Source Files\Logic Components">
+      <UniqueIdentifier>{8a8b154d-ba58-40c4-a2b0-8ec63e5e4760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Source Files\AI Components">
+      <UniqueIdentifier>{fcc335ab-ce86-4140-bb03-88d804578ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Header Files\Audio">
+      <UniqueIdentifier>{e44025ac-9fd9-4053-bce8-bcf864c06c9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Components\Source Files\Audio">
+      <UniqueIdentifier>{4d165dd4-64ca-439a-802e-c35572481547}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Src\Logic\Maps\ComponentFactory.cpp">
+      <Filter>Maps\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Maps\EntityFactory.cpp">
+      <Filter>Maps\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Maps\EntityID.cpp">
+      <Filter>Maps\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Maps\Map.cpp">
+      <Filter>Maps\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\CommunicationPort.cpp">
+      <Filter>Entity\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Component.cpp">
+      <Filter>Entity\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Entity.cpp">
+      <Filter>Entity\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Server.cpp">
+      <Filter>Maps\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\AnimatedGraphics.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\AvatarController.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\Camera.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\DamageTrap.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\DirectionalLight.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\EnemyController.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\Graphics.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\GroupBehaviour.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\Life.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\Particle.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\PhysicController.cpp">
+      <Filter>Entity\Components\Source Files\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\PhysicDebug.cpp">
+      <Filter>Entity\Components\Source Files\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\PhysicEntity.cpp">
+      <Filter>Entity\Components\Source Files\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\PointLight.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\PrincessManager.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\RouteTo.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\SetPhysicEntityHelperComponent.cpp">
+      <Filter>Entity\Components\Source Files\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\StateMachineExecutor.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\SmartObject.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\SteeringMovement.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\ThiefEnemyState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\WorkmanState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\Resource.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\ChestBehaviour.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\WorldComponent.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\3DSoundEvent.cpp">
+      <Filter>Entity\Components\Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\ListenerComponents.cpp">
+      <Filter>Entity\Components\Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\SoundEvent.cpp">
+      <Filter>Entity\Components\Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\UnitSelected.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\KnightState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\SpawnPointComponent.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\Discover.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\EnemyDetectionManager.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\WorldComponent.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\Visibility.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\GameManagerComponent.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\MudTrap.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\StatsModifier.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\AssassinState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\AssassinCamouflage.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\InteractSOState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\CombatStats.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\GUIManager.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\AnimationInventaryComponent.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\TransportedComponent.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\CarrierState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\ChaseCarriedEntityState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\ChestTrap.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\KitchenHeal.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\GatherState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\ArrowBehavior.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\RangerBehaviour.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\ChangeEntityTypeState.cpp">
+      <Filter>Entity\Components\Source Files\AI Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\EntityTypeExchanger.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\RemovableWorldComponent.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\BuildComponent.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\WellComponent.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\KitchenRecoverLife.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\VoiceManager.cpp">
+      <Filter>Entity\Components\Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\TrackComponent.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\CameraMenu.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\OscilationManager.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\CampComponent.cpp">
+      <Filter>Entity\Components\Source Files\Logic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Logic\Entity\Components\GlowManager.cpp">
+      <Filter>Entity\Components\Source Files\Graphics Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Src\Logic\Maps\ComponentFactory.h">
+      <Filter>Maps\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Maps\Documentation.h">
+      <Filter>Maps\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Maps\EntityFactory.h">
+      <Filter>Maps\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Maps\EntityID.h">
+      <Filter>Maps\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Maps\Map.h">
+      <Filter>Maps\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\CommunicationPort.h">
+      <Filter>Entity\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Component.h">
+      <Filter>Entity\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Documentation.h">
+      <Filter>Entity\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Entity.h">
+      <Filter>Entity\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Documentation.h">
+      <Filter>Maps\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Server.h">
+      <Filter>Maps\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\NMessage.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\AnimationMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\RangerMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\PhysicMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\SmartObjectMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\WorkmanMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\UnitMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\RouteCalculationMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\AllyUnitMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\CameraMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\MovementMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\GraphicsMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\EntityMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\EnemyMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\AnimatedGraphics.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\AvatarController.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\Camera.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\DamageTrap.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\DirectionalLight.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\EnemyController.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\Graphics.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\GroupBehaviour.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\Particle.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\Life.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\PhysicController.h">
+      <Filter>Entity\Components\Header Files\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\PhysicDebug.h">
+      <Filter>Entity\Components\Header Files\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\PhysicEntity.h">
+      <Filter>Entity\Components\Header Files\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\Physics.h">
+      <Filter>Entity\Components\Header Files\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\PointLight.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\RouteTo.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\SetPhysicEntityHelperComponent.h">
+      <Filter>Entity\Components\Header Files\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\StateMachineExecutor.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\SmartObject.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\ThiefEnemyState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\SteeringMovement.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\WorkmanState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\PrincessManager.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\Resource.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\ChestBehaviour.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\3DSoundEvent.h">
+      <Filter>Entity\Components\Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\ListenerComponent.h">
+      <Filter>Entity\Components\Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\SoundEvent.h">
+      <Filter>Entity\Components\Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\PrincessMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\UnitSelected.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\CombatMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\KnightState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\AimsMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\AudioMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\SpawnPointComponent.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\Discover.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\EnemyDetectionManager.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\WorldComponent.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\Visibility.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\GameManagerComponent.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\GameControlMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\MudTrap.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\StatsModifier.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\AssassinState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\AssassinCamouflage.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\InteractSOState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\CombatStats.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\GUIManager.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\AnimationInventaryComponent.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\TransportedComponent.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\CarrierState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\CarrierMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\ChaseCarriedEntityState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\ChestTrap.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\GUIMessages.h">
+      <Filter>Entity\Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\KitchenHeal.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\GatherState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\ArrowBehavior.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\RangerBehaviour.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\ChangeEntityTypeState.h">
+      <Filter>Entity\Components\Header Files\AI Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\EntityTypeExchanger.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\RemovableWorldComponent.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\BuildComponent.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\WellComponent.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\KitchenRecoverLife.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\VoiceManager.h">
+      <Filter>Entity\Components\Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\TrackComponent.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\CameraMenu.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\OscilationManager.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\CampComponent.h">
+      <Filter>Entity\Components\Header Files\Logic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Logic\Entity\Components\GlowManager.h">
+      <Filter>Entity\Components\Header Files\Graphics Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

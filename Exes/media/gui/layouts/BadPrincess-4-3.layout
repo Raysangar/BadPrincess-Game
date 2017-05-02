@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+  <Window type="DefaultWindow" name="DefaultWindow" >
+    <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+   
+	<Window type="OgreTray/StaticImage" name="IronLabelContainer" >
+		<Property name="Area" value="{{0,10},{0,10},{0.2,0},{0.15,0}}" />
+		<Property name="Image" value="BadPrincess/Iron" />
+		<Property name="FrameEnabled" value="true" />
+		<Property name="BackgroundEnabled" value="true" />
+		<Window type="OgreTray/Label" name="IronLabelTitle" >
+		  <Property name="Area" value="{{0.1,0},{0.1,0},{0.9,0},{0.5,0}}" />
+		  <Property name="Text" value="Iron" />
+		  <Property name="MaxSize" value="{{1,0},{1,0}}" />
+		</Window>
+		<Window type="OgreTray/Label" name="IronQuantity" >
+		  <Property name="Area" value="{{0.1,0},{0.5,0},{0.9,0},{0.9,0}}" />
+		  <Property name="Text" value="0" />
+		  <Property name="MaxSize" value="{{1,0},{1,0}}" />
+		</Window>
+	</Window>
+      <Window type="OgreTray/StaticImage" name="StoneLabelContainer" >
+        <Property name="Area" value="{{0.2,0},{0,10},{0.4,0},{0.15,0}}" />
+        <Property name="Image" value="BadPrincess/Stone" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Property name="FrameEnabled" value="true" />
+        <Property name="BackgroundEnabled" value="true" />
+        <Window type="OgreTray/Label" name="StoneLabelTitle" >
+          <Property name="Area" value="{{0.1,0},{0.1,0},{0.9,0},{0.5,0}}" />
+          <Property name="Text" value="Stone" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        </Window>
+		<Window type="OgreTray/Label" name="StoneQuantity" >
+          <Property name="Area" value="{{0.1,0},{0.5,0},{0.9,0},{0.9,0}}" />
+          <Property name="Text" value="0" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        </Window>
+      </Window>
+      <Window type="OgreTray/StaticImage" name="WoodLabelContainer" >
+        <Property name="Area" value="{{0.4,0},{0,10},{0.6,0},{0.15,0}}" />
+        <Property name="Image" value="BadPrincess/Wood" />       
+        <Property name="FrameEnabled" value="true" />
+        <Property name="BackgroundEnabled" value="false" />
+        <Window type="OgreTray/Label" name="WoodLabelTitle" >
+          <Property name="Area" value="{{0.1,0},{0.1,0},{0.9,0},{0.5,0}}" />
+          <Property name="Text" value="Wood" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        </Window>
+		<Window type="OgreTray/Label" name="WoodQuantity" >
+          <Property name="Area" value="{{0.1,0},{0.5,0},{0.9,0},{0.9,0}}" />
+          <Property name="Text" value="0" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        </Window>
+      </Window>
+	  	
+	<Window type="OgreTray/StaticImage" name="MinimapBackground" >		
+		<Property name="Area" value="{{0.691,0},{0.504,0},{1,0},{1,0}}" />	
+		<Property name="Image" value="BadPrincessMinimap/Minimap" />   
+        <Property name="FrameEnabled" value="true" />
+        <Property name="BackgroundEnabled" value="false" />
+		<Property name="Visible" value="false"/>
+	</Window>
+	
+	<Window type="Generic/Image" name="MinimapTextureContainer" >
+		<Property name="Area" value="{{0.703,0},{0.52,0},{0.99,0},{0.98,0}}" />	
+		<Property name="Visible" value="false"/>
+	</Window>
+	
+      <Window type="OgreTray/Listbox" name="MessageListBox" >
+        <Property name="Area" value="{{0.6,0},{0.05,0},{1,0},{0.4,0}}" />
+        <Property name="Font" value="Girls-10" />
+      </Window>
+      <Window type="OgreTray/Button" name="BtnCloseMessageList" >
+        <Property name="Area" value="{{0.95,0},{0.0,0},{1,0},{0.05,0}}" />
+        <Property name="Text" value="X"/>
+        <Property name="AlwaysOnTop" value="True" />
+      </Window>
+    <Window type="OgreTray/Button" name="BtnOpenMessageList" >
+      <Property name="Area" value="{{0.95,0},{0.0,0},{1,0},{0.05,0}}" />
+      <Property name="AlwaysOnTop" value="True" />
+    </Window>
+  
+        <Window type="BadPrincess/Group" name="Units" >
+            <Property name="Area" value="{{0.22,0},{0.76,0},{0.8,0},{1.0,0}}" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+
+        </Window>
+        
+		<Window type="BadPrincess/Portrait" name="ActiveUnitFrame" >
+			<Property name="Area" value="{{0.23,0},{0.77,0},{0.32,0},{0.99,0}}" />
+			<Property name="MaxSize" value="{{1,0},{1,0}}" />
+			<Property name="AlwaysOnTop" value="true" />
+		</Window>
+
+        <Window type="BadPrincess/Image" name="ActiveUnitPortrait" >
+            <Property name="Area" value="{{0.24,0},{0.8,0},{0.31,0},{0.94,0}}" />            
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+		<Window type="BadPrincess/Label" name="ActiveUnitType" >
+			<Property name="Area" value="{{0.24,0},{0.78,0},{0.31,0},{0.80,0}}" />
+			<Property name="Font" value="Girls-10" />			
+			<Property name="MaxSize" value="{{1,0},{1,0}}" />
+			<Property name="NormalTextColour" value="FFFAFA00" />
+			<Property name="AlwaysOnTop" value="true" />
+		</Window>
+		<Window type="BadPrincess/ProgressBar" name="ActiveUnitHealthBar" >
+            <Property name="Area" value="{{0.236,0},{0.943,0},{0.316,0},{0.98,0}}" />
+            <Property name="StepSize" value="0.01" />
+            <Property name="CurrentProgress" value="0.5" />
+			<Property name="AlwaysOnTop" value="true" />
+			<Window type="BadPrincess/Label" name="ActiveUnitHealth" >
+				<Property name="Area" value="{{0.1,0},{0.1,0},{0.9,0},{0.9,0}}" />
+				<Property name="Font" value="Girls-10" />			
+				<Property name="MaxSize" value="{{1,0},{1,0}}" />
+				<Property name="NormalTextColour" value="FF000000" />				
+			</Window>
+        </Window>
+
+		<Window type="BadPrincess/Label" name="AbilityQLabel" >
+			<Property name="Area" value="{{0.355,0},{0.76,0},{0.365,0},{0.80,0}}" />
+			<Property name="Font" value="Girls-10" />			
+			<Property name="MaxSize" value="{{1,0},{1,0}}" />
+			<Property name="NormalTextColour" value="FFFAFA00" />
+			<Property name="AlwaysOnTop" value="true" />
+			<Property name="Text" value="Q" />
+			<Property name="AlwaysOnTop" value="true" />
+		</Window>
+        <Window type="BadPrincess/ImageButton" name="AbilityQ" >
+            <Property name="Area" value="{{0.33,0},{0.79,0},{0.39,0},{0.89,0}}" />            
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+		
+		<Window type="BadPrincess/Label" name="AbilityWLabel" >
+			<Property name="Area" value="{{0.425,0},{0.76,0},{0.435,0},{0.80,0}}" />
+			<Property name="Font" value="Girls-10" />			
+			<Property name="MaxSize" value="{{1,0},{1,0}}" />
+			<Property name="NormalTextColour" value="FFFAFA00" />
+			<Property name="AlwaysOnTop" value="true" />
+			<Property name="Text" value="W" />
+			<Property name="AlwaysOnTop" value="true" />
+		</Window>
+        <Window type="BadPrincess/ImageButton" name="AbilityW" >
+            <Property name="Area" value="{{0.40,0},{0.79,0},{0.46,0},{0.89,0}}" />               
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+		
+		<Window type="BadPrincess/Label" name="AbilityELabel" >
+			<Property name="Area" value="{{0.495,0},{0.76,0},{0.505,0},{0.80,0}}" />
+			<Property name="Font" value="Girls-10" />			
+			<Property name="MaxSize" value="{{1,0},{1,0}}" />
+			<Property name="NormalTextColour" value="FFFAFA00" />
+			<Property name="AlwaysOnTop" value="true" />
+			<Property name="Text" value="E" />
+			<Property name="AlwaysOnTop" value="true" />
+		</Window>
+        <Window type="BadPrincess/ImageButton" name="AbilityE" >
+            <Property name="Area" value="{{0.47,0},{0.79,0},{0.53,0},{0.89,0}}" />            
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+		
+		<Window type="BadPrincess/Label" name="AbilityRLabel" >
+			<Property name="Area" value="{{0.565,0},{0.76,0},{0.575,0},{0.80,0}}" />
+			<Property name="Font" value="Girls-10" />			
+			<Property name="MaxSize" value="{{1,0},{1,0}}" />
+			<Property name="NormalTextColour" value="FFFAFA00" />
+			<Property name="AlwaysOnTop" value="true" />
+			<Property name="Text" value="R" />
+			<Property name="AlwaysOnTop" value="true" />
+		</Window>
+        <Window type="BadPrincess/ImageButton" name="AbilityR" >
+            <Property name="Area" value="{{0.54,0},{0.79,0},{0.60,0},{0.89,0}}" />                    
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+  
+  
+		<Window type="BadPrincess/Label" name="AggressiveModeLabel" >
+			<Property name="Area" value="{{0.6,0},{0.76,0},{0.66,0},{0.80,0}}" />
+			<Property name="Font" value="Girls-10" />			
+			<Property name="MaxSize" value="{{1,0},{1,0}}" />
+			<Property name="NormalTextColour" value="FFFAFA00" />
+			<Property name="AlwaysOnTop" value="true" />
+			<Property name="Text" value="Stand Mode" />
+			<Property name="AlwaysOnTop" value="true" />
+		</Window>
+	  <Window type="BadPrincess/ImageButton" name="AgressivePassiveButton" >
+		<Property name="Area" value="{{0.61,0},{0.79,0},{0.64,0},{0.84,0}}" />
+		<Property name="AlwaysOnTop" value="true" />		
+	  </Window>
+  
+        <Window type="BadPrincess/Image" name="WrathMeterIn" >
+            
+			<Property name="Area" value="{{-0.285,0},{0.65,0},{0.213,0},{1.45,0}}" />
+            <Property name="Image" value="BadPrincessHud2/WrathMeterIn" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+			
+			      
+
+
+
+			
+        </Window>
+        <Window type="BadPrincess/Image" name="WrathMeterOut" >
+			<Property name="Area" value="{{0,0},{0.69,0},{0.19,0},{1,0}}" />            
+            <Property name="Image" value="BadPrincessHud2/WrathMeterOut" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+			 
+        </Window>
+
+	  <Window type="BadPrincess/Image" name="PrincessPortrait" >
+            <Property name="Area" value="{{0,0},{0.82,0},{0.08,0},{1,0}}" />
+            <Property name="Image" value="BadPrincessHud2/PrincessPortrait" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+
+    <Window type="DefaultWindow" name="Statistics" >
+      <Property name="Area" value="{{0.2,0},{0,0},{0.8,0},{0.15,0}}" />
+
+      <Window type="BadPrincess/Label" name ="Timer">
+        <Property name="Area" value="{{0.4,0},{0.0,0},{0.6,0},{1.0,0}}" />
+        <Property name="AlwaysOnTop" value="True" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+      </Window>
+  </Window>
+</GUILayout>

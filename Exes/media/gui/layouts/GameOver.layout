@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+  <Window type="DefaultWindow" name="GameOver" >
+    <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+    <Window type="BadPrincess/Group" name="BackGround" >
+      <Property name="Area" value="{{0.1,0},{0.1,0},{0.9,0},{0.9,0}}" />
+      <Property name="MaxSize" value="{{1,0},{1,0}}" />
+      <Window type="DefaultWindow" name="Tutorial" >
+        <Property name="Area" value="{{0.6,0},{0.2,0},{0.9,0},{0.5,0}}" />
+
+        <Window type="BadPrincess/Label" name ="TitleWin">
+          <Property name="Area" value="{{0.0,0},{0.0,0},{1.0,0},{1.0,0}}" />
+          <Property name="NormalTextColour" value="FFA48C8C" />
+          <Property name="Text" value="MISSION COMPLETE!!" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        <Window type="BadPrincess/StaticText" name ="TitleLost">
+          <Property name="Area" value="{{0.0,0},{0.0,0},{1.0,0},{1.0,0}}" />
+          <Property name="Text" value="Ops..the princess has been kidnapped" />
+          <Property name="TextColours" value="tl:FFA48c8c tr:FFA48c8c bl:FFA48c8c br:FFA48c8c" />
+          <Property name="BackgroundEnabled" value="false"></Property>
+          <Property name="FrameEnabled" value="false"></Property>
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+      </Window>
+      
+      <Window type="DefaultWindow" name="Campaign" >
+        <Property name="Area" value="{{0.6,0},{0.15,0},{0.9,0},{0.5,0}}" />
+
+        <Window type="BadPrincess/Label" name ="TitleWin">
+          <Property name="Area" value="{{0.0,0},{0.0,0},{1.0,0},{0.7,0}}" />
+          <Property name="NormalTextColour" value="FFA48C8C" />
+          <Property name="Text" value="MISSION COMPLETE!!" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        <Window type="BadPrincess/StaticText" name ="TitleLost">
+          <Property name="Area" value="{{0.0,0},{0.0,0},{1.0,0},{1.0,0}}" />
+          <Property name="Text" value="Ops..the princess has been kidnapped" />
+          <Property name="TextColours" value="tl:FFA48c8c tr:FFA48c8c bl:FFA48c8c br:FFA48c8c" />
+          <Property name="BackgroundEnabled" value="false"></Property>
+          <Property name="FrameEnabled" value="false"></Property>
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+      </Window>
+      <Window type="DefaultWindow" name="Survivor" >
+        <Property name="Area" value="{{0.6,0},{0.1,0},{0.9,0},{0.5,0}}" />
+
+        <Window type="BadPrincess/StaticText" name ="TitleLost">
+          <Property name="Area" value="{{0.0,0},{0.0,0},{1.0,0},{0.3,0}}" />
+          <Property name="Text" value="Ops..the princess has been kidnapped" />
+          <Property name="TextColours" value="tl:FFA48c8c tr:FFA48c8c bl:FFA48c8c br:FFA48c8c" />
+          <Property name="BackgroundEnabled" value="false"></Property>
+          <Property name="FrameEnabled" value="false"></Property>
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+
+        <Window type="BadPrincess/StaticText" name ="ScoreLabel1">
+          <Property name="Area" value="{{0.0,0},{0.35,0},{0.4,0},{0.8,0}}" />
+          <Property name="Font" value="Girls-20" />
+          <Property name="Text" value="You pushed back" />
+          <Property name="TextColours" value="tl:FFa1799c tr:FFa1799c bl:FFa1799c br:FFa1799c" />
+          <Property name="BackgroundEnabled" value="false"></Property>
+          <Property name="FrameEnabled" value="false"></Property>
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        <Window type="BadPrincess/StaticText" name ="ScoreLabel2">
+          <Property name="Area" value="{{0.4,0},{0.35,0},{1.0,0},{0.8,0}}" />
+          <Property name="Text" value="" />
+          <Property name="BackgroundEnabled" value="false"></Property>
+          <Property name="TextColours" value="tl:FFa1799c tr:FFa1799c bl:FFa1799c br:FFa1799c" />
+          <Property name="FrameEnabled" value="false"></Property>
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        <Window type="BadPrincess/Image" name="ScoreRecordIcon" >
+          <Property name="Area" value="{{0.5,0},{0.3,0},{0.7,0},{0.5,0}}" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="true" />
+          <Property name="Visible" value="true" />
+          <Property name="Image" value="BadPrincessHud2/PrincessHighScore" />
+        </Window>
+        <Window type="BadPrincess/StaticText" name="BestScoreLabel" >
+          <Property name="Area" value="{{0.0,0},{0.8,0},{1.0,0},{1.0,0}}" />
+          <Property name="Text" value="" />
+          <Property name="TextColours" value="tl:FFA48c8c tr:FFA48c8c bl:FFA48c8c br:FFA48c8c" />
+          <Property name="BackgroundEnabled" value="false"></Property>
+          <Property name="FrameEnabled" value="false"></Property>
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+      </Window>
+      <Window type="BadPrincess/Image" name="PrincessIcon" >
+        <Property name="Area" value="{{0.15,0},{0.2,0},{0.45,0},{0.8,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Visible" value="true" />
+        <Property name="Image" value="BadPrincessHud2/PrincessPortrait" />
+      </Window>
+      <Window type="BadPrincess/Button" name="Continue" >
+        <Property name="Area" value="{{0.6,0},{0.4,0},{0.9,0},{0.5,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Text" value="Continue" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+      </Window>
+
+      <Window type="BadPrincess/Button" name="Retry" >
+        <Property name="Area" value="{{0.6,0},{0.55,0},{0.9,0},{0.65,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Text" value="Retry" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+      </Window>
+      <Window type="BadPrincess/Button" name="Menu" >
+        <Property name="Area" value="{{0.6,0},{0.7,0},{0.9,0},{0.8,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Text" value="Back to menu" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+      </Window>
+    </Window>
+  </Window>
+</GUILayout>

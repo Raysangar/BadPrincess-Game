@@ -1,0 +1,43 @@
+material mudtrap_poured_mud
+{
+	technique Map#14
+	{
+		pass Map#15
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#16
+			{
+				texture mudtrap_pot.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material mudtrap_poured_pot
+{
+	technique Map#11
+	{
+		pass Map#12
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#13
+			{
+				texture mudtrap_mud.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

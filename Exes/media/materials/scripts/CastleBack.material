@@ -1,0 +1,196 @@
+material caslte_lateralmaingate
+{
+	technique Map#37
+	{
+		pass Map#38
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#39
+			{
+				texture "Laterales puerta principal_COLOR.png"
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_core
+{
+	technique Map#9
+	{
+		pass Map#10
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#11
+			{
+				texture CASTILLO_COLOR.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_floor
+{
+	technique Map#25
+	{
+		pass Map#26
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#40
+			{
+				texture SUELO_COLOR.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_innerwall
+{
+	technique Map#13
+	{
+		pass Map#14
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#15
+			{
+				texture "DIVISIONES CENTRALES.jpg"
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_lateralgates
+{
+	technique Map#29
+	{
+		pass Map#30
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#31
+			{
+				texture "Puertas laterales_COLOR.png"
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_maingate
+{
+	technique Map#33
+	{
+		pass Map#34
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#35
+			{
+				texture "PUERTA CENTRAL_COLOR.png"
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_outerwall
+{
+	technique Map#21
+	{
+		pass Map#22
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#23
+			{
+				texture "LATERALES FONDO_COLOR.png"
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_tower
+{
+	technique Map#17
+	{
+		pass Map#18
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#19
+			{
+				texture Torre_COLOR.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material Material#55
+{
+	technique Map#17
+	{
+		pass Map#18
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#19
+			{
+				texture Torre_COLOR.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<GUIScheme version="5" name="BadPrincess">    
+  <Imageset filename="BadPrincessHud.imageset" />
+  <Imageset filename="BadPrincessHud2.imageset" />
+  <Imageset filename="logo.imageset" />
+  <LookNFeel filename="BadPrincess.looknfeel" />
+  <Font filename="Girls-48.font" />
+  <Font filename="Girls-24.font" />
+  <Font filename="Girls-20.font" />
+  <Font filename="Girls-14.font" />
+  <Font filename="Girls-10.font" />
+  
+  <WindowRendererSet filename="CEGUICoreWindowRendererSet" />
+  
+  <FalagardMapping windowType="BadPrincess/Label"                targetType="DefaultWindow"          renderer="Core/Default"             lookNFeel="BadPrincess/Label" />
+  <FalagardMapping windowType="BadPrincess/Image" 				 targetType="DefaultWindow" 		 renderer="Core/Default" 			 lookNFeel="BadPrincess/Image" />
+  <FalagardMapping windowType="BadPrincess/ImageButton"			 targetType="CEGUI/PushButton" 		 renderer="Core/Button" 			 lookNFeel="BadPrincess/ImageButton" />
+  <FalagardMapping windowType="BadPrincess/Thumb"                targetType="CEGUI/Thumb"            renderer="Core/Button"              lookNFeel="BadPrincess/Thumb" />
+  <FalagardMapping windowType="BadPrincess/Tooltip"              targetType="DefaultWindow"          renderer="Core/StaticText"          lookNFeel="BadPrincess/Tooltip" /> 	
+  <FalagardMapping windowType="BadPrincess/StaticText"           targetType="DefaultWindow"          renderer="Core/StaticText"          lookNFeel="BadPrincess/StaticText" />
+  <FalagardMapping windowType="BadPrincess/Group"                targetType="DefaultWindow"          renderer="Core/Default"             lookNFeel="BadPrincess/Group" />  
+  <FalagardMapping windowType="BadPrincess/Portrait"             targetType="DefaultWindow"          renderer="Core/Default"          	 lookNFeel="BadPrincess/Portrait" />  
+  <FalagardMapping windowType="BadPrincess/Button"               targetType="CEGUI/PushButton"       renderer="Core/Button"              lookNFeel="BadPrincess/Button" />
+  <FalagardMapping windowType="BadPrincess/ProgressBar"          targetType="CEGUI/ProgressBar"      renderer="Core/ProgressBar"         lookNFeel="BadPrincess/ProgressBar" />
+  <FalagardMapping windowType="BadPrincess/ColoredProgressBar"          targetType="CEGUI/ProgressBar"      renderer="Core/ProgressBar"         lookNFeel="BadPrincess/ColoredProgressBar" />
+  <FalagardMapping windowType="BadPrincess/MiniProgressBar"      targetType="CEGUI/ProgressBar"      renderer="Core/ProgressBar"         lookNFeel="BadPrincess/MiniProgressBar" />
+  <FalagardMapping windowType="BadPrincess/VerticalScrollbar"    targetType="CEGUI/Scrollbar"        renderer="Core/Scrollbar"           lookNFeel="BadPrincess/VerticalScrollbar" />
+  <FalagardMapping windowType="BadPrincess/HorizontalScrollbar"  targetType="CEGUI/Scrollbar"        renderer="Core/Scrollbar"           lookNFeel="BadPrincess/HorizontalScrollbar" />
+  <FalagardMapping windowType="BadPrincess/Editbox"              targetType="CEGUI/Editbox"          renderer="Core/Editbox"             lookNFeel="BadPrincess/Editbox" />
+  <FalagardMapping windowType="BadPrincess/ComboDropList"        targetType="CEGUI/ComboDropList"    renderer="Core/Listbox"             lookNFeel="BadPrincess/Listbox" />
+  <FalagardMapping windowType="BadPrincess/Combobox"             targetType="CEGUI/Combobox"         renderer="Core/Default"             lookNFeel="BadPrincess/Combobox" />
+  <FalagardMapping windowType="BadPrincess/Listbox"              targetType="CEGUI/Listbox"          renderer="Core/Listbox"             lookNFeel="BadPrincess/Listbox" />
+  <FalagardMapping windowType="BadPrincess/Slider"               targetType="CEGUI/Slider"           renderer="Core/Slider"              lookNFeel="BadPrincess/Slider" />
+  <FalagardMapping windowType="BadPrincess/Checkbox"             targetType="CEGUI/ToggleButton"     renderer="Core/ToggleButton"        lookNFeel="BadPrincess/Checkbox" />
+  <FalagardMapping windowType="BadPrincess/LabelShortcut"             targetType="DefaultWindow"     renderer="Core/Default"        lookNFeel="BadPrincess/LabelShortcut" />
+
+</GUIScheme>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Fichero Ant para la compilación del proyecto -->
+<!-- Marco Antonio Gomez Martin -->
+<!-- Abril, 2010 -->
+
+<project name="luabind" default="build">
+
+  <!-- Se basa todo en invocaciones a bjam -->
+
+  <!-- =========== -->
+  <!-- PROPIEDADES -->
+  <!-- =========== -->
+
+  <property name="bjamDefaultParams" value='-sLUA_PATH="../lua" -sBOOST_BUILD_PATH="./boost-build" -sBOOST_ROOT="../include" --toolset=msvc-11.0 link=shared'/>
+
+  <property name="vslogfile" value="${basedir}/vslog.txt"/>
+  <property name="slnName" value="vsproject/LUA.sln"/>
+
+  <patternset id="vctmpfiles">
+    <include name="**/*.suo"/>
+    <include name="**/*.ncb"/>
+    <include name="**/*.exp"/>
+    <include name="**/*.ilk"/>
+    <include name="**/*.user"/>
+  </patternset>
+
+  <!-- ============================================= -->
+  <!-- TARGETS DE COPIA AL DIRECTORIO DE EJECUTABLES -->
+  <!-- ============================================= -->
+
+  <target name="publishIncludes">
+     <mkdir dir="../include/luabind"/>
+     <copy todir="../include/luabind">
+       <fileset dir="./luabind"/>
+     </copy>
+  </target>
+
+  <target name="publishDebug" depends="publishIncludes">
+    <copy file="bin/msvc-11.0/debug/threading-multi/luabindd.dll" todir="../bin/Debug"/>
+    <copy file="bin/msvc-11.0/debug/threading-multi/luabindd.lib" todir="../lib/Debug"/>
+  </target>
+
+  <target name="publishRelease" depends="publishIncludes">
+    <copy file="bin/msvc-11.0/release/threading-multi/luabind.dll" todir="../bin/Release"/>
+    <copy file="bin/msvc-11.0/release/threading-multi/luabind.lib" todir="../lib/Release"/>
+  </target>
+
+  <!-- =================== -->
+  <!-- TARGETS DE LIMPIEZA -->
+  <!-- =================== -->
+
+<target name="cleanDebug"
+        description="Elimina los ficheros de la compilacion en Debug">
+
+   <exec executable="${basedir}/bjam" failonerror="true" dir="${basedir}">
+      <arg line="${bjamDefaultParams}"/>
+      <arg line="--clean"/>
+      <arg line="debug"/>
+   </exec>
+
+</target>
+
+<target name="cleanRelease"
+        description="Elimina los ficheros de la compilacion en Release">
+
+   <exec executable="${basedir}/bjam" failonerror="true" dir="${basedir}">
+      <arg line="${bjamDefaultParams}"/>
+      <arg line="--clean"/>
+      <arg line="release"/>
+   </exec>
+
+</target>
+
+<target name="clean"
+        description="Elimina ficheros de compilación"
+	depends="cleanDebug, cleanRelease">
+
+   <delete dir="bin"/>
+</target>
+
+  <!-- ================================== -->
+  <!-- TARGETS DE COMPILACION INCREMENTAL -->
+  <!-- ================================== -->
+
+<!-- Objetivo que compila el proyecto en modo Debug. -->
+<target name="debug"
+        description="Compilación (incremental) en modo Debug">
+
+   <exec executable="${basedir}/bjam" failonerror="true" dir="${basedir}">
+      <arg line="${bjamDefaultParams}"/>
+      <arg line="debug"/>
+   </exec>
+
+   <antcall target="publishDebug"/>
+
+</target>
+
+<!-- Objetivo que compila el proyecto en modo Release. -->
+<target name="release"
+        description="Compilación (incremental) en modo Release">
+
+   <exec executable="${basedir}/bjam" failonerror="true" dir="${basedir}">
+      <arg line="${bjamDefaultParams}"/>
+      <arg line="release"/>
+   </exec>
+
+   <antcall target="publishRelease"/>
+
+</target>
+
+<!-- Objetivo que compila el proyecto (Debug+Release) de forma incremental. -->
+<target name="build"
+        description="Compilación (incremental) Debug y Release."
+        depends="debug, release"/>
+
+  <!-- =============================== -->
+  <!-- TARGETS DE COMPILACION COMPLETA -->
+  <!-- =============================== -->
+
+<!-- Objetivo que compila todo el proyecto en modo Debug. -->
+<target name="redebug"
+        description="Compilación desde cero en modo Debug"
+        depends="cleanDebug">
+
+   <exec executable="${basedir}/bjam" failonerror="true" dir="${basedir}">
+      <arg line="${bjamDefaultParams}"/>
+      <arg line="-a"/>
+      <arg line="debug"/>
+   </exec>
+
+   <antcall target="publishDebug"/>
+
+</target>
+
+<!-- Objetivo que compila todo el proyecto en modo Release. -->
+<target name="rerelease"
+        description="Compilación desde cero en modo Release"
+        depends="cleanRelease">
+
+   <exec executable="${basedir}/bjam" failonerror="true" dir="${basedir}">
+      <arg line="${bjamDefaultParams}"/>
+      <arg line="-a"/>
+      <arg line="release"/>
+   </exec>
+
+   <antcall target="publishRelease"/>
+
+</target>
+
+<!-- Objetivo que compila todo el proyecto (Debug+Release). -->
+<target name="rebuild"
+        description="Compilación desde cero en Debug y Release."
+        depends="clean, redebug, rerelease"/>
+
+  <!-- ============================= -->
+  <!-- TARGETS DE EJECUCION DE TESTS -->
+  <!-- ============================= -->
+
+<target name="runTests"
+        description="Ejecución de tests (en este proyecto no hay)."/>
+
+<target name="tests" description="Compilacion y ejecución de tests."
+        depends="build, runTests"/>
+
+  <!-- ==================================== -->
+  <!-- TARGETS DE CREACION DE DOCUMENTACION -->
+  <!-- ==================================== -->
+
+<target name="doxygen"
+        description="Genera la documentación, si la hay."/>
+
+  <!-- =========================== -->
+  <!-- TARGETS PARA CRUISE CONTROL --> 
+  <!-- =========================== -->
+
+<target name="CruiseControl"
+        depends="build, runTests"
+        description="Compilacion para CruiseControl (build + tests)."/>
+
+</project>

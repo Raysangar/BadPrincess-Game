@@ -1,0 +1,63 @@
+material WellBucketMaterial
+{
+	technique WellBucketTechnique
+	{
+		pass WellBucketPass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellBucketTexture
+			{
+				texture bucket_texture.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material WellMaterial
+{
+	technique WellTechnique
+	{
+		pass WellPass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellTexture
+			{
+				texture well_texture.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+material WellMaterialRed
+{
+	technique WellTechnique
+	{
+		pass WellPass
+		{
+			ambient 1.0 0.0 0.0 1
+			diffuse 1.0 0.0 0.0 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellTexture
+			{
+				texture well_texture.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

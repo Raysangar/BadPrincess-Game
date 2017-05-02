@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{E0E4B5FB-0050-44F4-B7DE-4110820FBD16}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>POST_BUILD_CLEANUP</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -P L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/msvc_postbuild.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -P L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/msvc_postbuild.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -P L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/msvc_postbuild.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -P L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/msvc_postbuild.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeDependentOption.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeSystem.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeCCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeCXXCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeRCCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeRCInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeDependentOption.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeSystem.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeCCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeCXXCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeRCCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeRCInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeDependentOption.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeSystem.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeCCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeCXXCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeRCCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeRCInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeDependentOption.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeSystem.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeCCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeCXXCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\2.8.11.2\CMakeRCCompiler.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeRCInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\cmake\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\8839cc56a4f8001d196fec2109bbd319\POST_BUILD_CLEANUP.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/CMakeFiles/8839cc56a4f8001d196fec2109bbd319/POST_BUILD_CLEANUP.rule;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\zlib_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\libpng_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\jpeg_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\freetype_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\pcre_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\lua_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\expat_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\xerces-c_3_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\SILLY_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\glew_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\toluapp_d.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\glfw_d.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\POST_BUILD_CLEANUP</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/CMakeFiles/8839cc56a4f8001d196fec2109bbd319/POST_BUILD_CLEANUP.rule;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\zlib.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\libpng.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\jpeg.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\freetype.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\pcre.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\lua.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\expat.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\xerces-c_3.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\SILLY.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\glew.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\toluapp.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\glfw.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\POST_BUILD_CLEANUP</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/CMakeFiles/8839cc56a4f8001d196fec2109bbd319/POST_BUILD_CLEANUP.rule;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\zlib.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\libpng.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\jpeg.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\freetype.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\pcre.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\lua.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\expat.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\xerces-c_3.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\SILLY.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\glew.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\toluapp.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\glfw.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\POST_BUILD_CLEANUP</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/CMakeFiles/8839cc56a4f8001d196fec2109bbd319/POST_BUILD_CLEANUP.rule;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\zlib.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\libpng.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\jpeg.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\freetype.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\pcre.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\lua.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\expat.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\xerces-c_3.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\SILLY.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\glew.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\toluapp.dll;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\bin\glfw.dll;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\CMakeFiles\POST_BUILD_CLEANUP</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\POST_BUILD_CLEANUP" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/SILLY/CEGUI-BUILD/SILLY.vcxproj">
+      <Project>FB0B2512-8443-48F3-8F65-BF5BA5558480</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/ZERO_CHECK.vcxproj">
+      <Project>1E94D217-526D-4F6A-8A10-B1D322B0ADA6</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/expat-2.0.1/CEGUI-BUILD/expat.vcxproj">
+      <Project>51805B5A-247C-4BC6-A533-1EC86F7D1F29</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/freetype-2.4.4/CEGUI-BUILD/freetype.vcxproj">
+      <Project>FB814664-5AD6-4F54-9F2B-D7FD96E19B69</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/glew-1.7.0/CEGUI-BUILD/glew.vcxproj">
+      <Project>8B579A6C-6680-4CAF-93E8-5D24D8A91457</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/glfw-2.7.2/CEGUI-BUILD/glfw.vcxproj">
+      <Project>9869FB5D-4D12-45D3-9E8E-FC1BEE98E77D</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/jpeg-8c/CEGUI-BUILD/jpeg.vcxproj">
+      <Project>C9A9746C-8C57-4FA4-BB4B-2479D7ACC517</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/libpng-1.4.7/CEGUI-BUILD/libpng.vcxproj">
+      <Project>294ECD11-FD32-4D95-9E4D-D955FC5DA699</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/lua-5.1.4/CEGUI-BUILD/lua.vcxproj">
+      <Project>05F2F8C2-E538-4264-BA7B-50E11E9D12C7</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/pcre-8.12/CEGUI-BUILD/pcre.vcxproj">
+      <Project>EB68D06C-D7C2-4BA3-BDCD-56872A1C336D</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/tolua++-1.0.93/CEGUI-BUILD/toluapp.vcxproj">
+      <Project>ED75E68F-1B72-4B79-9A30-852A4147D899</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/xerces-c-3.1.1/CEGUI-BUILD/xerces-c_3.vcxproj">
+      <Project>6DC09BD8-CF77-4AEC-9E00-3C03BEF216D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/src/zlib-1.2.5/CEGUI-BUILD/zlib.vcxproj">
+      <Project>E50260EF-D171-4397-84C6-AF53FEAB0E0F</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

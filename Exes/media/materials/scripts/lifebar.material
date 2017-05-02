@@ -1,0 +1,39 @@
+material LifebarBg
+{
+	technique
+	{
+		pass
+		{
+			scene_blend alpha_blend
+		   depth_write off
+			texture_unit 
+			{
+				texture lifebarBg.png
+				tex_address_mode wrap
+			}
+
+		}
+
+	}
+
+}
+material LifebarFg
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+		    depth_write off
+			texture_unit 
+			{
+				texture lifebarFg.png
+				tex_address_mode clamp
+			}
+		}
+
+	}
+}
+
+

@@ -1,0 +1,20 @@
+material material_pot
+{
+	technique technique_pot
+	{
+		pass pass_pot
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			texture_unit texture_pot
+			{
+				texture pot_diffuse.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

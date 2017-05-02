@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+  <Window type="DefaultWindow" name="Loading" >
+    <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+    <Window type="BadPrincess/Group" name="LoadingGame" >
+      <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+      <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Window type="BadPrincess/Label" name ="Title">
+          <Property name="Area" value="{{0.25,0},{0.2,0},{0.75,0},{0.35,0}}" />
+          <Property name="NormalTextColour" value="FFA48C8C" />
+          <Property name="Text" value="LOADING..." />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        <Window type="BadPrincess/ProgressBar" name ="ProgressBar">
+          <Property name="Area" value="{{0.3,0},{0.4,0},{0.7,0},{0.5,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        <Window type="BadPrincess/Image" name="WorkmanIcon" >
+          <Property name="Area" value="{{0.1,0},{0.6,0},{0.24,0},{0.84,0}}" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="true" />
+          <Property name="Visible" value="false" />
+          <Property name="Image" value="BadPrincessHud/WorkmanPortrait" />
+        </Window>
+        <Window type="BadPrincess/Image" name="RangerIcon" >
+          <Property name="Area" value="{{0.3,0},{0.6,0},{0.44,0},{0.84,0}}" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="true" />
+          <Property name="Visible" value="false" />
+          <Property name="Image" value="BadPrincessHud/RangerPortrait" />
+        </Window>
+        <Window type="BadPrincess/Image" name="WarriorIcon" >
+          <Property name="Area" value="{{0.5,0},{0.6,0},{0.64,0},{0.84,0}}" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="true" />
+          <Property name="Visible" value="false" />
+          <Property name="Image" value="BadPrincessHud2/WarriorPortrait" />
+        </Window>
+        <Window type="BadPrincess/Image" name="PrincessIcon" >
+          <Property name="Area" value="{{0.7,0},{0.6,0},{0.84,0},{0.84,0}}" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="true" />
+          <Property name="Visible" value="false" />
+          <Property name="Image" value="BadPrincessHud2/PrincessPortrait" />
+        </Window>
+    </Window>
+    <Window type="BadPrincess/Group" name="LoadingMenu" >
+      <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+      <Property name="MaxSize" value="{{1,0},{1,0}}" />
+      <Window type="DefaultWindow" name="First" >
+        <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+      
+        <Window type="BadPrincess/Label" name ="Title">
+          <Property name="Area" value="{{0.25,0},{0.35,0},{0.75,0},{0.45,0}}" />
+          <Property name="Text" value="Bad Princess Team" />
+          <Property name="Font" value="Girls-48" />
+          <Property name="NormalTextColour" value="FFA48C8C" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        <Window type="BadPrincess/Label" name ="SubTitle">
+          <Property name="Area" value="{{0.25,0},{0.55,0},{0.75,0},{0.65,0}}" />
+          <Property name="Text" value="Presents" />
+          <Property name="NormalTextColour" value="FFF3EDFA" />
+          <Property name="Font" value="Girls-24" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="True" />
+        </Window>
+      </Window>
+     <Window type="DefaultWindow" name="Normal" >
+        <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />      
+          <Window type="BadPrincess/Image" name="Logo" >
+          <Property name="Area" value="{{0.19,0},{0.14,0},{0.79,0},{0.74,0}}" />
+          <Property name="MaxSize" value="{{1,0},{1,0}}" />
+          <Property name="AlwaysOnTop" value="true" />
+          <Property name="Image" value="logo/logo" />
+        </Window>
+      </Window>
+      <Window type="BadPrincess/Label" name ="Loading">
+        <Property name="Area" value="{{0.75,0},{0.75,0},{0.95,0},{0.85,0}}" />
+        <Property name="Text" value="loading" />
+        <Property name="Font" value="Girls-14" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Property name="NormalTextColour" value="FFA48C8C" />
+        <Property name="AlwaysOnTop" value="True" />
+      </Window>
+
+    </Window>
+  </Window>
+</GUILayout>

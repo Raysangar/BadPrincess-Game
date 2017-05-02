@@ -1,0 +1,20 @@
+material SwordMaterial
+{
+	technique SwordTechnique
+	{
+		pass SwordPass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit SwordTexture
+			{
+				texture cust_sword01.tga
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

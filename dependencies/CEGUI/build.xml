@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Fichero Ant para la compilación del proyecto -->
+<!-- Marco Antonio Gomez Martin -->
+<!-- Julio, 2010 -->
+
+<project name="CEGUI" default="build">
+
+  <!-- =========== -->
+  <!-- PROPIEDADES -->
+  <!-- =========== -->
+
+  <property name="vslogfile" value="${basedir}/vslog.txt"/>
+  <property name="ceguiSLN" value="cegui.sln"/>
+
+  <patternset id="vctmpfiles">
+    <include name="**/*.suo"/>
+    <include name="**/*.ncb"/>
+    <include name="**/*.sdf"/>
+    <include name="**/*.exp"/>
+    <include name="**/*.ilk"/>
+    <include name="**/*.user"/>
+  </patternset>
+
+  <taskdef resource = "vcTasks.properties" classpath="vcTask"/>
+
+  <!-- ===================================================== -->
+  <!-- TARGET DE INVOCACION A TODOS LOS BUILD.XML AUXILIARES -->
+  <!-- ===================================================== -->
+
+<!-- 
+     Invoca todos los build.xml de las librerías con el target del parámetro.
+     Parámetro: targetUsed
+-->
+<target name="llamaBuilds"
+        description="Invoca todos los build.xml de las librerias con un target dado">
+
+      <ant antfile="build.xml" target="${targetUsed}" dir="./dependencies"/>
+
+</target>
+
+  <!-- =============================================== -->
+  <!-- TARGET DE PUBLICACION DE .h Y BINARIOS          -->
+  <!-- =============================================== -->
+<target name="publishLibBinDebug">
+
+   <copy todir="../bin/Debug">
+      <fileset dir="./build/bin" 
+               includes="*_d.dll"
+               excludes="*Demo*"/>
+   </copy>
+   
+   <copy todir="../lib/Debug">
+      <fileset dir="./build/lib" 
+               includes="*_d.lib"
+               excludes="*Demo*"/>
+   </copy>
+   
+   <copy file="dependencies/build/dependencies/bin/SILLY_d.dll" todir="../bin/Debug"/>
+   <copy file="dependencies/build/dependencies/bin/libpng_d.dll" todir="../bin/Debug"/>
+   <copy file="dependencies/build/dependencies/bin/xerces-c_3_d.dll" todir="../bin/Debug"/>
+   <copy file="dependencies/build/dependencies/bin/zlib_d.dll" todir="../bin/Debug"/>
+   <copy file="dependencies/build/dependencies/bin/jpeg_d.dll" todir="../bin/Debug"/>
+   <copy file="dependencies/build/dependencies/bin/freetype_d.dll" todir="../bin/Debug"/>
+   <copy file="dependencies/build/dependencies/bin/toluapp_d.dll" todir="../bin/Debug"/>
+
+</target>
+
+<target name="publishLibBinRelease">
+
+   <copy todir="../bin/Release">
+      <fileset dir="./build/bin" 
+               includes="*.dll"
+               excludes="*_d.dll,*Demo*"/>
+   </copy>
+   
+   <copy todir="../lib/Release">
+      <fileset dir="./build/lib" 
+               includes="*.lib"
+               excludes="*_d.lib,*Demo*"/>
+   </copy>
+   
+   <copy file="dependencies/build/dependencies/bin/SILLY.dll" todir="../bin/Release"/>
+   <copy file="dependencies/build/dependencies/bin/libpng.dll" todir="../bin/Release"/>
+   <copy file="dependencies/build/dependencies/bin/xerces-c_3.dll" todir="../bin/Release"/>
+   <copy file="dependencies/build/dependencies/bin/zlib.dll" todir="../bin/Release"/>
+   <copy file="dependencies/build/dependencies/bin/jpeg.dll" todir="../bin/Release"/>
+   <copy file="dependencies/build/dependencies/bin/freetype.dll" todir="../bin/Release"/>
+   <copy file="dependencies/build/dependencies/bin/toluapp.dll" todir="../bin/Debug"/>
+</target>
+
+
+<target name="publishIncludes">
+    <mkdir dir="../include/cegui"/>
+    <copy todir="../include/cegui">
+       <fileset dir="cegui/include"/>
+       <fileset dir="build/cegui/include"/>
+    </copy>
+</target>
+
+  <!-- ==================================== -->
+  <!-- TARGET DE INVOCACION A VISUAL STUDIO -->
+  <!-- ==================================== -->
+
+<!-- Objetivo que compila un proyecto de VC11.
+Parámetros (utilizando propiedades):
+  projectfolder: Directorio donde está el SLN.
+  buildmode: Configuracion. Normalmente, Debug o Release.
+  rebuild: "true" si se quiere recompilar; false si no
+  project: Fichero .sln a compilar. Se pueden poner comodines ("**/*.sln").
+  vslogfile: fichero donde se guarda el log de la compilacion (se borra luego).
+-->
+<target name="windowsbuilder">
+  <vc11 projectfolder="${projectfolder}" 
+       buildmode="${buildmode}"
+       rebuild="${rebuild}"
+       logfile="${vslogfile}">
+    <targets dir="${projectfolder}" includes="${project}"/>
+  </vc11>
+  <delete file = "${vslogfile}"/>
+</target>
+
+<!-- Objetivo que compila el proyecto.
+Parametros:
+   config: Debug o Release
+   rebuild: "true" si se quiere recompilar; false si no.
+-->
+<target name="compilaSln">
+
+  <antcall target="windowsbuilder">
+    <param name="projectfolder" value="${basedir}/build"/>
+    <param name="buildmode" value="${config}"/>
+    <param name="project" value="${ceguiSLN}"/>
+  </antcall>
+</target>
+
+  <!-- ==================================== -->
+  <!-- TARGETS DE CREACION DE LOS PROYECTOS -->
+  <!-- ==================================== -->
+
+<target name="createSln">
+
+   <mkdir dir="${basedir}/build"/>
+   <exec executable="${basedir}/../CMake/bin/cmake.exe"
+	 dir="${basedir}/build/">
+      <arg line='-LH'/>
+      <arg value="-DCEGUI_BUILD_RENDERER_OGRE=TRUE"/>
+      <arg value="-DCEGUI_BUILD_XMLPARSER_XERCES=TRUE"/>
+      <arg value="-DCEGUI_BUILD_IMAGECODEC_SILLY=TRUE"/>
+      <arg value='-DCEGUI_OPTION_DEFAULT_IMAGECODEC="SILLYImageCodec"'/>
+      <arg value="-DCEGUI_BUILD_LUA_MODULE=TRUE"/>
+      <arg value="-DCEGUI_MSVC_STATIC_RUNTIME=TRUE"/>
+      <arg value="-DCEGUI_HAS_FREETYPE=TRUE"/>
+      <arg value="-DCEGUI_SAMPLES_ENABLED=FALSE"/>
+    <!--  <arg value="-DCEGUI_BUILD_SHARED_LIBS_WITH_STATIC_DEPENDENCIES=TRUE"/>-->
+      <arg value='-DOGRE_LIBRARIES="../../lib/Release/OgreMain.lib"'/>
+      <arg value='-DOGRE_LIB_DBG="../../lib/Debug/OgreMain_d.lib"'/>
+	  <arg value='-DOGRE_LIB="../../lib/Release/OgreMain.lib"'/>
+      <arg value='-DOGRE_LIBRARIES_DBG="../../lib/Debug/OgreMain_d.lib"'/>
+      <arg value='-DOGRE_H_BUILD_SETTINGS_PATH="../../include/OGRE"'/>
+      <arg value='-DOGRE_H_PATH="../../include/OGRE"'/>
+      <arg value='-DOGRE_INCLUDE_DIR="../../include/OGRE"'/>
+      <arg value='-DOGRE_HOME="../../Ogre"'/>
+      <arg value='-DOGRE_FOUND=TRUE'/>
+      <arg value='-DLUA_LIB="../../lib/Release/lua51.lib"'/>
+      <arg value='-DLUA_LIB_DBG="../../lib/Debug/lua51.lib"'/>
+      <arg value='-DLUA_H_PATH="../../lua/src"'/>
+      <arg value='-DTOLUAPP_LIB="../dependencies/build/dependencies/lib/dynamic/toluapp.lib"'/>
+      <arg value='-DTOLUAPP_LIB_DBG="../dependencies/build/dependencies/lib/dynamic/toluapp_d.lib"'/>
+      <arg value='-DTOLUAPP_H_PATH="../dependencies/src/tolua++-1.0.93/include"'/>
+      <arg value='-DSILLY_LIB_DBG="../dependencies/build/dependencies/lib/dynamic/SILLY_d.lib"'/>
+      <arg value='-DSILLY_LIB="../dependencies/build/dependencies/lib/dynamic/SILLY.lib"'/>
+      <arg value='-DSILLY_H_PATH="../dependencies/src/SILLY/include"'/>
+      <arg value='-DXERCESC_LIB_DBG="../dependencies/build/dependencies/lib/dynamic/xerces-c_3_d.lib"'/>
+      <arg value='-DXERCESC_LIB="../dependencies/build/dependencies/lib/dynamic/xerces-c_3.lib"'/>
+      <arg value='-DXERCESC_H_PATH="../dependencies/src/xerces-c-3.1.1/src"'/>
+      <arg value='-DFREETYPE_LIB_DBG="../dependencies/build/dependencies/lib/dynamic/freetype_d.lib"'/>
+      <arg value='-DFREETYPE_LIB="../dependencies/build/dependencies/lib/dynamic/freetype.lib"'/>
+      <arg value='-DFREETYPE_H_PATH_ft2build="../dependencies/src/freetype-2.4.4/include"'/>
+      <arg value='-DFREETYPE_H_PATH_ftconfig="../dependencies/src/freetype-2.4.4/include"'/>
+      <arg line='-G "Visual Studio 11"'/>
+      <arg value=".."/>
+   </exec>
+
+</target>
+
+  <!-- =================== -->
+  <!-- TARGETS DE LIMPIEZA -->
+  <!-- =================== -->
+
+<target name="cleanDebug"
+        description="Elimina los ficheros de la compilacion en Debug">
+
+  <antcall target="llamaBuilds">
+    <param name="targetUsed" value="cleanDebug"/>
+  </antcall>
+
+   <delete includeemptydirs="true" failonerror="false">
+      <fileset dir="${basedir}/build/lib" includes="*_d*"/>
+      <fileset dir="${basedir}/build/bin" includes="*_d*"/>
+      <fileset dir="${basedir}" includes="**/Debug/"/>
+   </delete>
+   
+</target>
+
+<target name="cleanRelease"
+        description="Elimina los ficheros de la compilacion en Release">
+
+  <antcall target="llamaBuilds">
+    <param name="targetUsed" value="cleanRelease"/>
+  </antcall>
+
+   <delete includeemptydirs="true" failonerror="false">
+      <fileset dir="${basedir}/build/lib" includes="*" excludes="*_d*"/>
+      <fileset dir="${basedir}/build/bin" includes="*" excludes="*_d*"/>
+      <fileset dir="${basedir}" includes="**/Release/"/>
+   </delete>
+
+</target>
+
+<target name="clean"
+        description="Elimina ficheros de compilación"
+	depends="cleanDebug, cleanRelease">
+
+  <antcall target="llamaBuilds">
+    <param name="targetUsed" value="clean"/>
+  </antcall>
+
+   <delete>
+     <fileset dir="${basedir}">
+       <patternset refid="vctmpfiles"/>
+     </fileset>
+   </delete>
+  <delete file = "${vslogfile}"/>
+	
+   <delete includeemptydirs="true" failonerror="false">
+     <fileset dir="${basedir}/build"/>
+   </delete>
+   
+</target>
+
+  <!-- ================================== -->
+  <!-- TARGETS DE COMPILACION INCREMENTAL -->
+  <!-- ================================== -->
+
+<!-- Objetivo que compila el proyecto en modo Debug. -->
+<target name="debug"
+        description="Compilación (incremental) en modo Debug">
+
+  <antcall target="llamaBuilds">
+    <param name="targetUsed" value="debug"/>
+  </antcall>
+
+  <antcall target="createSln"> 
+  </antcall>
+
+  <antcall target="compilaSln">
+    <param name="config" value="Debug"/>
+    <param name="rebuild" value="false"/>
+  </antcall>
+
+  <!-- Y copiamos las .dll al Exes -->
+  <antcall target="publishLibBinDebug"/>
+
+  <!-- Y los ficheros de cabecera -->
+  <antcall target="publishIncludes"/>
+</target>
+
+<!-- Objetivo que compila el proyecto en modo Release. -->
+<target name="release"
+        description="Compilación (incremental) en modo Release">
+
+  <antcall target="llamaBuilds">
+    <param name="targetUsed" value="release"/>
+  </antcall>
+
+  <antcall target="createSln">
+  </antcall>
+
+  <antcall target="compilaSln">
+    <param name="config" value="Release"/>
+    <param name="rebuild" value="false"/>
+  </antcall>
+
+  <!-- Y copiamos las .dll al Exes -->
+  <antcall target="publishLibBinRelease"/>
+
+  <!-- Y los ficheros de cabecera -->
+  <antcall target="publishIncludes"/>
+</target>
+
+<!-- Objetivo que compila el proyecto (Debug+Release) de forma incremental. -->
+<target name="build"
+        description="Compilación (incremental) Debug y Release."
+        depends="debug, release"/>
+
+  <!-- =============================== -->
+  <!-- TARGETS DE COMPILACION COMPLETA -->
+  <!-- =============================== -->
+
+<!-- Objetivo que compila todo el proyecto en modo Debug. -->
+<target name="redebug"
+        description="Compilación desde cero en modo Debug"
+        depends="cleanDebug">
+
+  <antcall target="llamaBuilds">
+    <param name="targetUsed" value="redebug"/>
+  </antcall>
+
+  <antcall target="createSln">
+  </antcall>
+
+  <antcall target="compilaSln">
+    <param name="config" value="Debug"/>
+    <param name="rebuild" value="true"/>
+  </antcall>
+
+  <!-- Y copiamos las .dll al Exes -->
+  <antcall target="publishLibBinDebug"/>
+
+  <!-- Y los ficheros de cabecera -->
+  <antcall target="publishIncludes"/>
+</target>
+
+<!-- Objetivo que compila todo el proyecto en modo Release. -->
+<target name="rerelease"
+        description="Compilación desde cero en modo Release"
+        depends="cleanRelease">
+
+  <antcall target="llamaBuilds">
+    <param name="targetUsed" value="rerelease"/>
+  </antcall>
+
+  <antcall target="createSln">
+  </antcall>
+
+  <antcall target="compilaSln">
+    <param name="config" value="Release"/>
+    <param name="rebuild" value="true"/>
+  </antcall>
+
+  <!-- Y copiamos las .dll al Exes -->
+  <antcall target="publishLibBinRelease"/>
+
+  <!-- Y los ficheros de cabecera -->
+  <antcall target="publishIncludes"/>
+
+</target>
+
+<!-- Objetivo que compila todo el proyecto (Debug+Release). -->
+<target name="rebuild"
+        description="Compilación desde cero en Debug y Release."
+        depends="clean, redebug, rerelease"/>
+
+  <!-- ============================= -->
+  <!-- TARGETS DE EJECUCION DE TESTS -->
+  <!-- ============================= -->
+
+<target name="runTests"
+        description="Ejecución de tests del proyecto (si los hay...)."/>
+
+<target name="tests" description="Compilacion y ejecución de tests."
+        depends="build, runTests"/>
+
+  <!-- ==================================== -->
+  <!-- TARGETS DE CREACION DE DOCUMENTACION -->
+  <!-- ==================================== -->
+
+<target name="doxygen"
+        description="Genera la documentación, si la hay."/>
+
+  <!-- =========================== -->
+  <!-- TARGETS PARA CRUISE CONTROL --> 
+  <!-- =========================== -->
+
+<target name="CruiseControl"
+        depends="build, runTests"
+        description="Compilacion para CruiseControl (build + tests)."/>
+
+</project>

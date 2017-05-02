@@ -1,0 +1,86 @@
+material castle_lateralgates
+{
+	technique Map#29
+	{
+		pass Map#30
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#31
+			{
+				texture "Puertas laterales_COLOR.png"
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_lateralmaingate
+{
+	technique Map#37
+	{
+		pass Map#38
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#39
+			{
+				texture "Laterales puerta principal_COLOR.png"
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_maingate
+{
+	technique Map#33
+	{
+		pass Map#34
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#35
+			{
+				texture "PUERTA CENTRAL_COLOR.png"
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+material castle_tower
+{
+	technique Map#17
+	{
+		pass Map#18
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit Map#19
+			{
+				texture Torre_COLOR.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

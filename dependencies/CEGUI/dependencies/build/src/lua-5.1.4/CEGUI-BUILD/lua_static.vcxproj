@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{6C00E9A8-AB48-4AD7-BAB0-B09826CFAE69}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>lua_static</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\lib\static\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lua_static.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lua_d</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\lib\static\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lua_static.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lua</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\lib\static\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">lua_static.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">lua</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\dependencies\lib\static\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">lua_static.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">lua</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/lib/static/lua_d.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/lib/static/lua.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/lib/static/lua.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/dependencies/lib/static/lua.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\lua-5.1.4\CEGUI-BUILD\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\lua-5.1.4\CEGUI-BUILD\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\lua-5.1.4\CEGUI-BUILD\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\lua-5.1.4\CEGUI-BUILD\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\lua-5.1.4\CEGUI-BUILD\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\lua-5.1.4\CEGUI-BUILD\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CMake\bin\cmake.exe -HL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies -BL:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build --check-stamp-file L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\lua-5.1.4\CEGUI-BUILD\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/src/lua-5.1.4/CEGUI-BUILD/CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt;L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\src\lua-5.1.4\CEGUI-BUILD\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">L:\Estudios\Master\BadPrincess\BadPrincess\trunk\BadPrincess\dependencies\CEGUI\dependencies\build\src\lua-5.1.4\CEGUI-BUILD\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lapi.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lauxlib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lbaselib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lcode.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\ldblib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\ldebug.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\ldo.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\ldump.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lfunc.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lgc.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\linit.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\liolib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\llex.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lmathlib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lmem.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\loadlib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lobject.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lopcodes.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\loslib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lparser.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lstate.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lstring.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lstrlib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\ltable.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\ltablib.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\ltm.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lundump.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lvm.c"  />
+    <ClCompile Include="..\..\..\..\src\lua-5.1.4\src\lzio.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="L:/Estudios/Master/BadPrincess/BadPrincess/trunk/BadPrincess/dependencies/CEGUI/dependencies/build/ZERO_CHECK.vcxproj">
+      <Project>1E94D217-526D-4F6A-8A10-B1D322B0ADA6</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,6 @@
+fragment_program SimpleBlur_hlsl hlsl
+{
+	source SimpleBlur.hlsl
+	entry_point main_fp
+	target ps_2_0
+}

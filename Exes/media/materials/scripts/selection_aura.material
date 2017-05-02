@@ -1,0 +1,22 @@
+
+material selection_aura
+{
+    technique
+    {
+        pass
+        { 
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0 0 0 0 0
+
+			scene_blend alpha_blend
+			depth_write off
+			
+            texture_unit
+            {
+				texture selection_aura.png  
+				rotate_anim 0.03 								
+            }
+        }       
+    }
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+    <Window type="DefaultWindow" name="Campaign" >
+        <Property name="Area" value="{{-1,0},{0,0},{0,0},{1,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+		
+		<Window type="BadPrincess/Button" name="Level1" >
+        <Property name="Area" value="{{0.1,0},{0.15,0},{0.4,0},{0.25,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Text" value="Level 1" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+		<Property name="Disabled" value="True" />
+      </Window>
+	  
+	  <Window type="BadPrincess/Button" name="Level2" >
+        <Property name="Area" value="{{0.1,0},{0.3,0},{0.4,0},{0.4,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Text" value="Level 2" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+		<Property name="Disabled" value="True" />
+      </Window>
+	  
+	  <Window type="BadPrincess/Button" name="Level3" >
+        <Property name="Area" value="{{0.1,0},{0.45,0},{0.4,0},{0.55,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Text" value="Level 3" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+		<Property name="Disabled" value="True" />
+      </Window>
+	  
+	  <Window type="BadPrincess/Button" name="Level4" >
+        <Property name="Area" value="{{0.1,0},{0.60,0},{0.4,0},{0.7,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Text" value="Level 4" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+		<Property name="Disabled" value="True" />
+      </Window>
+	  
+	  <Window type="BadPrincess/Button" name="Level5" >
+        <Property name="Area" value="{{0.1,0},{0.75,0},{0.4,0},{0.85,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Property name="Text" value="Level 5" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+		<Property name="Disabled" value="True" />
+      </Window>
+
+      <Window type="BadPrincess/Button" name="Back" >
+        <Property name="Area" value="{{0.6,0},{0.75,0},{0.9,0},{0.85,0}}" />
+        <Property name="Text" value="Back" />
+        <Property name="AlwaysOnTop" value="True" />
+        <Property name="NormalTextColour" value="FFF3EDFA" />
+        <Property name="HoverTextColour" value="FFF3EDFA" />
+        <Property name="PushedTextColour" value="FFF3EDFA" />
+      </Window>
+
+    </Window>
+</GUILayout>

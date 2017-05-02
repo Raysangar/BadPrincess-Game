@@ -1,0 +1,72 @@
+system summon
+{
+    keep_local                                  true
+    scale_velocity                              0.06
+    scale                                       0.06 0.06 0.06
+    technique 
+    {
+        visual_particle_quota                   3
+        material                                mp_seal_04
+        default_particle_width                  400
+        default_particle_height                 400
+        renderer                                Billboard
+        {
+            billboard_type                      perpendicular_self
+            billboard_rotation_type             vertex
+            common_direction                    0 1 0
+            common_up_vector                    0 0 1
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       15
+            angle                               0
+            time_to_live                        2
+            velocity                            0.0001
+            duration                            0.3
+            end_colour_range                    0.501961 0 1 1
+            colour                              0.501961 0 1 1
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.5  1 1 1 1
+            time_colour                         1    0 0 0 1
+            colour_operation                    multiply
+        }
+    }
+    technique 
+    {
+        position                                0 -10 0
+        visual_particle_quota                   60
+        material                                mp_seal_flare
+        default_particle_width                  700
+        default_particle_height                 300
+        renderer                                Billboard
+        {
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       20
+            angle                               0
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             1.5
+            }
+            velocity                            160
+            duration                            1
+            end_colour_range                    0.25098 0 0.501961 1
+            colour                              0.25098 0 0.501961 1
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.243478  0.25098 0 0.501961 1
+            time_colour                         0.491304  1 1 1 1
+            time_colour                         0.75  0.25098 0 0.501961 1
+            time_colour                         1    0 0 0 1
+            colour_operation                    multiply
+        }
+    }
+}

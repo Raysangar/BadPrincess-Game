@@ -1,0 +1,40 @@
+system stunned
+{
+	scale_time   1
+	
+    category                                    Examples_11_20
+    technique 
+    {
+		position                                0 5 0
+        visual_particle_quota                   3000
+        material                                ParticleUniverse/Star
+        default_particle_width                  1.5
+        default_particle_height                 1.5
+        default_particle_depth                  1.5
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       3
+			angle                               dyn_random
+            {
+                min                             10
+                max                             45
+            }
+            time_to_live                        4
+            velocity                            8
+            all_particle_dimensions             3
+        }
+		affector                                Scale 
+        {
+            xyz_scale                           -2
+        }
+        affector                                SphereCollider 
+        {
+            position                            0 12 0
+            collision_type                      flow
+            radius                              9
+        }
+    }
+}

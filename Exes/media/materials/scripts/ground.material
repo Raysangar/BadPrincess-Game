@@ -1,0 +1,401 @@
+import * from "FogOfWar.material"
+material ground : FogOfWardMaterialUnified
+{
+	technique technique_ground
+	{
+		pass pass_ground
+		{
+			texture_unit ground_texture
+			{
+				texture ground_diffuse.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+material material_ground_2 : FogOfWardMaterialUnified
+{
+	technique technique_ground_2
+	{
+		pass pass_ground_2
+		{
+			texture_unit texture_ground_2
+			{
+				texture ground_2_diffuse.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+material material_decals
+{
+	technique technique_decals
+	{
+		pass pass_decals
+		{
+			ambient 0 0 0 0
+			diffuse 0 0 0 0
+			specular 0 0 0 0 0
+			
+			scene_blend alpha_blend
+			depth_write off
+			
+			texture_unit texture_decals
+			{
+				texture decals_quad.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+material material_river_1 : FogOfWardMaterialUnified
+{
+	technique technique_river_1
+	{
+		pass pass_river_1
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 5
+
+			texture_unit texture_river_1
+			{
+				texture river_ground.jpg
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+material material_water_1
+{
+	technique technique_water_1
+	{
+		pass pass_water_1
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_1
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 0
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_10
+{
+	technique technique_water_10
+	{
+		pass pass_water_10
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_10
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 0.02
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_11
+{
+	technique technique_water_11
+	{
+		pass pass_water_11
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_11
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 0.02
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_12
+{
+	technique technique_water_12
+	{
+		pass pass_water_12
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_12
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 0
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_2
+{
+	technique technique_water_2
+	{
+		pass pass_water_2
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_2
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 -0.02
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_3
+{
+	technique technique_water_3
+	{
+		pass pass_water_3
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_3
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 -0.02
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_4
+{
+	technique technique_water_4
+	{
+		pass pass_water_4
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_4
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 -0.02
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_5
+{
+	technique technique_water_5
+	{
+		pass pass_water_5
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_5
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 -0.02
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_6
+{
+	technique technique_water_6
+	{
+		pass pass_water_6
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_6
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 -0.02
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_7
+{
+	technique technique_water_7
+	{
+		pass pass_water_7
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_7
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 -0.02
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_8
+{
+	technique technique_water_8
+	{
+		pass pass_water_8
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit water_texture_8
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 0
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_water_9
+{
+	technique technique_water_9
+	{
+		pass pass_water_9
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit texture_water_9
+			{
+				texture water.png
+				filtering linear linear linear
+				scroll_anim 0.04 0
+			}
+		}
+
+	}
+
+}

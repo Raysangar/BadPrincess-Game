@@ -1,0 +1,41 @@
+
+material barril
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 10 0
+
+			texture_unit
+			{
+				texture barril.tga
+			}
+		}
+
+	}
+
+}
+material barrilRed
+{
+	technique
+	{
+		pass
+		{
+			ambient 1.0 0.0 0.0 1
+			diffuse 1.0 0.0 0.0 1
+			specular 0 0 0 10 0
+
+			texture_unit
+			{
+				texture barril.tga
+			}
+		}
+
+	}
+
+}
+
+

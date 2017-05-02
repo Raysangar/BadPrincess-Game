@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+    <Window type="DefaultWindow" name="Pause" >
+        <Property name="Area" value="{{0.3,0},{0.1,0},{0.7,0},{0.9,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Window type="BadPrincess/Group" name="BackGround" >
+            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+            <Window type="BadPrincess/Label" >
+			    <Property name="Area" value="{{0.0,0},{0.0,0},{1.0,0},{0.2,0}}" />
+				<Property name="NormalTextColour" value="FFA48C8C" />
+                <Property name="Text" value="PAUSE" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+            </Window>
+        </Window>
+		<Window type="BadPrincess/Button" name="Resume" >
+            <Property name="Area" value="{{0.1,0},{0.3,0},{0.9,0},{0.4,0}}" />
+            <Property name="Text" value="Resume Game" />
+            <Property name="AlwaysOnTop" value="True" />
+        </Window>
+		<Window type="BadPrincess/Button" name="Restart" >
+            <Property name="Area" value="{{0.1,0},{0.5,0},{0.9,0},{0.6,0}}" />
+            <Property name="Text" value="Restart Level" />
+            <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        <Window type="BadPrincess/Button" name="Menu" >
+            <Property name="Area" value="{{0.1,0},{0.7,0},{0.9,0},{0.8,0}}" />
+            <Property name="Text" value="Back to Menu" />
+            <Property name="AlwaysOnTop" value="True" />
+        </Window>
+
+
+    </Window>
+</GUILayout>

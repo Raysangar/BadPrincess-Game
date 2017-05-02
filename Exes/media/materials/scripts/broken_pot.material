@@ -1,0 +1,20 @@
+material material_broken_pot
+{
+	technique technique_broken_pot
+	{
+		pass pass_broken_pot
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.2 0.2 0.2 1 4
+
+			texture_unit texture_broken_pot
+			{
+				texture broken_pot_diffuse.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

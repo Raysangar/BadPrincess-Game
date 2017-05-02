@@ -1,0 +1,69 @@
+<PhysX30Collection version='3.3.2' >
+	<UpVector >0 1 0</UpVector>
+	<Scale>
+		<Length>1</Length>
+		<Mass>1000</Mass>
+		<Speed>10</Speed>
+	</Scale>
+	<PxMaterial >
+		<Id >1504165728</Id>
+		<DynamicFriction >0.5</DynamicFriction>
+		<StaticFriction >0.5</StaticFriction>
+		<Restitution >1</Restitution>
+		<FrictionCombineMode >eMIN</FrictionCombineMode>
+		<RestitutionCombineMode >eMIN</RestitutionCombineMode>
+	</PxMaterial>
+	<PxMaterial >
+		<Id >1504165808</Id>
+		<DynamicFriction >0.3</DynamicFriction>
+		<StaticFriction >0.3</StaticFriction>
+		<Restitution >0.5</Restitution>
+		<FrictionCombineMode >eAVERAGE</FrictionCombineMode>
+		<RestitutionCombineMode >eAVERAGE</RestitutionCombineMode>
+	</PxMaterial>	
+	<PxTriangleMesh >
+		<Id >1522819648</Id>
+		<Points > -26589.8 -26589.8 0 26589.8 -26589.8 0
+		-26589.8 26589.8 0 26589.8 26589.8 0
+		-26589.8 -26589.8 131.619 26589.8 -26589.8 131.619
+		-26589.8 26589.8 131.619 26589.8 26589.8 131.619</Points>
+		<Triangles > 0 2 3 3 1 0
+		5 4 0 0 1 5
+		2 0 4 4 6 2
+		7 6 4 4 5 7
+		6 7 3 3 2 6
+		7 5 1 1 3 7</Triangles>
+	</PxTriangleMesh>	
+	<PxRigidStatic >
+		<Id >1504172560</Id>
+		<Name >Ground</Name>
+		<ActorFlags >eVISUALIZATION</ActorFlags>
+		<DominanceGroup >0</DominanceGroup>
+		<OwnerClient>0</OwnerClient>
+		<ClientBehaviorBits>0</ClientBehaviorBits>
+		<GlobalPose >0 0 0 1 -0.000976563 -1396.9 0</GlobalPose>
+		<Shapes >
+			<PxShape >
+				<Geometry >
+					<PxTriangleMeshGeometry >
+						<Scale >
+							<Scale >1 1 1</Scale>
+							<Rotation >0 0 0 1</Rotation>
+						</Scale>
+						<TriangleMesh >1522819648</TriangleMesh>
+					</PxTriangleMeshGeometry>
+				</Geometry>
+				<LocalPose >0 0 0 1 0 0 0</LocalPose>
+				<SimulationFilterData>8 0 8 0</SimulationFilterData>
+				<QueryFilterData >0 0 0 0</QueryFilterData>
+				<Materials >
+					<PxMaterialRef >1504165808</PxMaterialRef>
+				</Materials>
+				<ContactOffset>1</ContactOffset>
+				<RestOffset>0</RestOffset>
+				<Flags >eSIMULATION_SHAPE|eSCENE_QUERY_SHAPE|eVISUALIZATION</Flags>
+				<Name >Ground</Name>
+			</PxShape>
+		</Shapes>
+	</PxRigidStatic>
+</PhysX30Collection>

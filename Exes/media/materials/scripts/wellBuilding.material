@@ -1,0 +1,134 @@
+material WellBuildingBrickMaterial
+{
+	technique WellBuildingBrickTecnique
+	{
+		pass WellBuildingBrickPass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellBuildingBrickTexture
+			{
+				texture wellBrick.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material WellBuildingBucketMaterial
+{
+	technique WellBuildingBucketTecnique
+	{
+		pass WellBuildingBucketPass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellBuildingBucketTexture
+			{
+				texture wellBucket.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material WellBuildingChiselMaterial
+{
+	technique WellBuildingChiselTechnique
+	{
+		pass WellBuildingChiselPass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellBuildingChiselTexture
+			{
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material WellBuildingHammerMaterial
+{
+	technique WellBuildingHammerTechnique
+	{
+		pass WellBuildingHammerPass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellBuildingHammerTexture
+			{
+				texture wellHammer.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material WellBuildingMaterial
+{
+	technique WellBuildingTechnique
+	{
+		pass WellBuildingPass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellBuildingTexture
+			{
+				texture wellBuilding.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material WellBuildingStoneMaterial
+{
+	technique WellBuildingStoneTechnique
+	{
+		pass WellBuildingStonePass
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 20
+
+			texture_unit WellBuildingStoneTexture
+			{
+				texture wellStone.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

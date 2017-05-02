@@ -1,0 +1,42 @@
+﻿Project Tutor
+
+Antonio A. Sanchez Ruiz-Granados
+
+
+Game Designers
+
+Alfonso Arrivas
+Javier Vela
+
+
+3D art
+
+Animated Models:
+
+Manuel Gil Enriquez
+Carlos Hernandez
+
+Scene Models:
+
+Alfonso Arrivas
+Manuel Gil Enriquez
+Noelia Leon Santiago
+
+
+Music
+
+Isabel Royan Gonzalez
+Carlos Vences Gonzalez
+
+Princess Voice
+
+Paloma Vences Gonzalez
+
+
+Programmers
+
+Ivan Leon Santiago
+Giacomo Guidi
+Jorge Luque Carrasco
+Manuel Gil Enriquez
+Rayco Sanchez Garcia

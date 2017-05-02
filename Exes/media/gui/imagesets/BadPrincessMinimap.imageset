@@ -1,0 +1,3 @@
+<Imageset autoScaled="vertical" imagefile="tutorialMinimap.png" name="BadPrincessMinimap" nativeHorzRes="512" nativeVertRes="512" version="2">
+    <Image height="512" name="Minimap" width="512" xPos="0" yPos="0" />
+</Imageset>

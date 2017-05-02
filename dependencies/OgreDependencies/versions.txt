@@ -1,0 +1,13 @@
+INCLUDED LIBRARY VERSIONS
+===========================
+
+* Cg 3.1 (Windows only)
+* FreeImage 3.15.3
+* freetype 2.4.9
+* OIS 1.4
+* zlib 1.2.8
+* zziplib 0.13.62
+
+CUSTOM OGRE CHANGES
+===========================
+* /src/zlib/gzguts.h (lines 32-34): added "unistd.h" include on non-Windows platforms for Ogre's Emscripten support

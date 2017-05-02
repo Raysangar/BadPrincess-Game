@@ -1,0 +1,46 @@
+import * from "FogOfWar.material"
+material material_iron_metal : FogOfWardMaterialUnified
+{
+	technique tecnique_iron_metal
+	{
+		pass pass_iron_metal
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 1 40
+			emissive 0.776471 0.803922 0.831373 1
+
+			texture_unit iron_texture
+			{
+				texture iron_diffuse.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}
+
+
+
+material material_iron_rock : FogOfWardMaterialUnified
+{
+	technique technique_iron_rock
+	{
+		pass pass_iron_rock
+		{
+			ambient 0.698039 0.698039 0.698039 1
+			diffuse 0.698039 0.698039 0.698039 1
+			specular 0.898039 0.898039 0.898039 0.2 20
+			emissive 0 0 0 0.1
+
+			texture_unit iron_texture
+			{
+				texture iron_diffuse.png
+				filtering linear linear linear
+			}
+		}
+
+	}
+
+}

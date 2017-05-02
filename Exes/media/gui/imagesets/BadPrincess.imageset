@@ -1,0 +1,6 @@
+<Imageset autoScaled="vertical" imagefile="BadPrincessResource.png" name="BadPrincess" nativeHorzRes="512" nativeVertRes="512" version="2">
+    <Image height="66" name="Iron" width="100" xPos="100" yPos="0" />
+    <Image height="66" name="Wood" width="100" xPos="0" yPos="0" />
+    <Image height="66" name="Stone" width="100" xPos="200" yPos="0" />
+    <Image height="1" name="Transparent" width="1" xPos="0" yPos="67" />
+</Imageset>
